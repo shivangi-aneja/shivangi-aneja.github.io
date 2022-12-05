@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>ClipFace: Text-guided Editing of Textured 3D Morphable Models</title>
+
+    <!-- Custom fonts for this template-->
+    <link href="../../vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
+    <link
+        href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i"
+        rel="stylesheet">
+     <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
+
+    <!-- Custom styles for this template-->
+    <!-- <link href="css/sb-admin-2.min.css" rel="stylesheet"> -->
+    <link href="../../css/styles.css" rel="stylesheet">
+
+</head>
+
+
+<body id="page-top">
+
+    <!-- Page Wrapper -->
+    <div id="wrapper">
+
+        
+        <!-- Content Wrapper -->
+        <div id="content-wrapper" class="d-flex flex-column">
+
+            <!-- Main Content -->
+            <div id="content">
+
+          
+
+                <!-- Begin Page Content -->
+                <div class="container-fluid">
+
+                    <!-- Page Heading -->
+                    <div class=" align-items-center justify-content-between mt-5 mb-4 text-center">
+                        <h1 class="h1 mb-0 text-gray-800 text-center">ClipFace: Text-guided Editing of Textured 3D Morphable Models </h1>
+
+                        <!-- <h4 class="h4 mb-0 text-gray-800 text-center mt-2"><a href="https://eccv2022.ecva.net/">ECCV 2022</a></h4> -->
+                       
+                    </div>
+
+                    <div class=" align-items-center justify-content-between text-center">
+                        <!-- Content Row -->
+                    	<div class="row">
+                        <div class="col-xl-2 col-md-2 mb-4 align-items-center">
+                        </div>
+                        <div class="col-xl-2 col-md-2 mb-4 align-items-center">
+                        	<h3> <a href="https://niessnerlab.org/members/shivangi_aneja/profile.html">Shivangi Aneja</a><sup>1</sup></h3>
+                        </div>
+                        <!-- <div class="col-xl-1 col-md-1 mb-4 align-items-center">	
+                        </div> -->
+                        <div class="col-xl-2 col-md-2 mb-4 align-items-center">
+                        	<h3> <a href="https://is.mpg.de/~jthies">Justus Thies</a><sup>2</sup></h3>
+                        </div>
+                        <!-- <div class="col-xl-1 col-md-1 mb-4 align-items-center">	
+                        </div> -->
+                        <div class="col-xl-2 col-md-2 mb-4 align-items-center">
+                            <h3> <a href="https://www.professoren.tum.de/en/dai-angela">Angela Dai</a><sup>2</sup></h3>
+                        </div>
+                        <div class="col-xl-2 col-md-2 mb-4 align-items-center">
+                        	<h3> <a href="https://niessnerlab.org/members/matthias_niessner/profile.html">Matthias Nießner</a><sup>1</sup></h3>
+                        </div>
+                    	</div>
+                    </div>
+                    <div class=" align-items-center justify-content-between text-center">
+                        <!-- Content Row -->
+                    	<div class="row">
+                        <div class="col-xl-3 col-md-3 mb-4 align-items-center">	
+                        </div>
+                        <div class="col-xl-3 col-md-3 mb-6 align-items-center">
+                        	<h5></a><sup>1</sup>Technical University of Munich</h5>
+                        </div>
+                        
+                        <div class="col-xl-3 col-md-3 mb-6 align-items-center">
+                        	<h5></a><sup>2</sup>Max Planck Institute for Intelligent Systems</h5>
+                        </div>
+                        <div class="col-xl-4 col-md-4 mb-4 align-items-center">	
+                        </div>
+                        
+                    	</div>
+                    </div>
+
+                     <div class=" align-items-center justify-content-between mt-2 mb-4 text-center">
+                        <!-- Content Row -->
+                    	<div class="row">
+                        <div class="col-xl-12 col-md-12 mb-4 align-items-center">
+                            	<div class="card-body">
+                            		<div class="no-gutters align-items-center ">
+
+                            		<div class="">
+                            			
+                            			<a class="btn btn-primary lift btn-xl ml-3 mr-3" href="" target="_blank">
+										    <i class="ai ai-arxiv ai-1x mr-3"></i>ArXiv
+										</a>
+                            			<a class="btn btn-primary lift btn-xl ml-3 mr-3" href="https://youtu.be/toGOQqFuNmA" target="_blank">
+										    <i class="fab fa-youtube fa-1x mr-3"></i> Video
+										</a>
+                            			
+                            			<a class="btn btn-primary lift btn-xl ml-3 mr-3" href="https://github.com/shivangi-aneja/ClipFace" target="_blank">
+										    <i class="fab fa-github fa-1x mr-3"></i> GitHub
+										</a>
+
+                                        <a class="btn btn-primary lift btn-xl ml-3 mr-3" href="assets/ClipFace.pdf" target="_blank">
+										    <i class="fas fa-file-pdf fa-1x mr-3"></i> Paper
+										</a>
+                            			
+                            		</div>
+                            			
+                            		</div>
+                            	</div>
+                    </div>  
+
+                </div>
+
+
+                 <!-- Concept Figure -->
+                            <div class="card shadow mb-4">
+                                <div class="card-header py-3">
+                                    <h2 class="m-0 font-weight-bold text-primary">ClipFace: Method Overview</h2>
+                                </div>
+                                <div class="card-body">
+                                    <div class="text-center">
+                                        <img class="img-fluid px-3 px-sm-4 mt-3 mb-4 justify-content-between" 
+                                            src="img/teaser.gif" alt="">
+                                    </div>
+                                    <p>ClipFace learns a self-supervised generative model for jointly synthesizing geometry and texture leveraging 3D morphable face models, that can be guided by text prompts. For a given 3D mesh with fixed topology, we can generate arbitrary face textures as UV maps (top).
+    The textured mesh can then be manipulated with text guidance to generate diverse set of textures and geometric expressions in 3D by altering (a) only the UV texture maps for Texture Manipulation and (b) both UV maps and mesh geometry for Expression Manipulation.</p>
+                                </div>
+                            </div>
+
+                    
+                    <!-- Abstract -->
+                            <div class="card shadow mb-4">
+                                <div class="card-header py-3">
+                                    <h2 class="m-0 font-weight-bold text-primary">Abstract</h2>
+                                </div>
+                                <div class="card-body">
+                                    
+                                    <p class="text-left">We propose ClipFace, a novel self-supervised approach for text-guided editing of textured 3D morphable model of faces. Specifically, we employ user-friendly language prompts to enable control of the expressions as well as appearance of 3D faces. We leverage the geometric expressiveness of 3D morphable models, which inherently possess limited controllability and texture expressivity, and develop a self-supervised generative model to jointly synthesize expressive, textured, and articulated faces in 3D. We enable high-quality texture generation for 3D faces by adversarial self-supervised training, guided by differentiable rendering against collections of real RGB images. Controllable editing and manipulation are given by language prompts to adapt texture and expression of the 3D morphable model. To this end, we propose a neural network that predicts both texture and expression latent codes of the morphable model. Our model is trained in a self-supervised fashion by exploiting differentiable rendering and losses based on a pre-trained CLIP model. Once trained, our model jointly predicts face textures in UV-space, along with expression parameters to capture both geometry and texture changes in facial expressions in a single forward pass. We further show the applicability of our method to generate temporally changing textures for a given animation sequence.  </p>
+                                    <div class="text-center">
+                                        <img class="img-fluid px-3 px-sm-4 mt-3 mb-4 justify-content-between col-lg-6 col-sm-12 col-xl-6 col-md-12" 
+                                            src="img/ooc_vs_nooc.jpeg" alt="">
+                                    </div>
+                                </div>
+                            </div>
+
+
+                             <div class="card shadow mb-4">
+                                <div class="card-header py-3">
+                                    <h2 class="m-0 font-weight-bold text-primary">Video</h2>
+                                </div>
+                                <div class="card-body">
+                                    <div class="row">
+                        			<div class="mb-4 col-xl-2 col-lg-2"></div>
+	                            	<div class="mb-4 col-xl-8 col-lg-8">
+                                    <div class="embed-responsive embed-responsive-16by9">
+									  <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/toGOQqFuNmA" allowfullscreen></iframe>
+									</div>
+									<div class="mb-4 col-xl-2 col-lg-2"></div>
+								</div>
+                                </div>
+                            </div>
+                  
+
+
+                    <!-- Results -->
+                    <div class="card shadow mb-4">
+                        <div class="card-header py-3">
+                            <h2 class="m-0 font-weight-bold text-primary">Results</h2>
+                        </div>
+                        
+                        <div class="card-body">
+                            
+                            <div class="row">
+
+                                <div class="col-xl-6 col-md-6 mb-6 align-items-center">
+                                    <h3 class="m-0 font-weight-bold text-primary mt-3 mb-3">Baseline Comparison: Texture Generation</h3>
+                                    <img class="img-fluid px-3 px-sm-4 mt-3 mb-4 justify-content-between"  src="img/texture_comp.gif" alt="">
+                                </div>
+
+                                <div class="col-xl-6 col-md-6 mb-6 align-items-center">
+                                    <h3 class="m-0 font-weight-bold text-primary mt-3 mb-3">Baseline Comparison: Texture Manipulation</h3>
+                                    <img class="img-fluid px-3 px-sm-4 mt-3 mb-4 justify-content-between"  src="img/text_comp.gif" alt="">
+                                </div>
+
+                                <div class="col-xl-6 col-md-6 mb-6 align-items-center">
+                                    <h3 class="m-0 font-weight-bold text-primary mt-3 mb-3">Text-Guided Texture Manipulation</h3>
+                                    <img class="img-fluid px-3 px-sm-4 mt-3 mb-4 justify-content-between"  src="img/texture_manipulation.gif" alt="">
+                                </div>
+
+                                <div class="col-xl-6 col-md-6 mb-6 align-items-center">
+                                    <h3 class="m-0 font-weight-bold text-primary mt-3 mb-3">Text-Guided Expression Manipulation</h3>
+                                    <img class="img-fluid px-3 px-sm-4 mt-3 mb-4 justify-content-between"  src="img/expression_manipulation.gif" alt="">
+                                </div>          
+                            </div>
+                        </div>
+
+
+                     <div class="mt-2"></div>
+					
+                  
+                    <div class="card shadow">
+                                <div class="card-header py-3">
+                                    <h2 class="m-0 font-weight-bold text-primary">BibTeX</h2>
+                                </div>
+                                <div class="card-body">
+                                    <div class="text-left">
+                                    	<p>If you find this work useful for your research, please consider citing:</p>
+                                        <pre><code><!-- @inproceedings{aneja2021tafim,
+    title={{TAFIM}: Targeted {A}dversarial {A}ttacks against {F}acial {I}mage {M}anipulations}, 
+    author={Shivangi Aneja and Lev Markhasin and Matthias Nie{\ss}ner},
+    booktitle={ArXiv preprint arXiv:2112.09151},
+    year={2021}
+} -->
+					
+										</code></pre>
+                                    </div>
+                                    
+                                </div>
+                            </div>
+
+                </div>
+                <!-- /.container-fluid -->
+
+            </div>
+            <!-- End of Main Content -->
+
+            <!-- Footer -->
+           <!--  <footer class="sticky-footer bg-white">
+                <div class="container my-auto">
+                    <div class="copyright text-center my-auto">
+                        <span>Copyright &copy; Your Website 2020</span>
+                    </div>
+                </div>
+            </footer> -->
+            <footer class="footer mt-auto footer-light">
+                <div class="container-fluid">
+                    <div class="copyright text-center my-auto">
+                        <span>Copyright &copy; Shivangi Aneja 2022</span><br>
+                        <span>Made with <span class="text-primary"><a href="https://startbootstrap.com/theme/sb-admin-2" >Bootstrap</a></span></span>
+                    </div>
+                </div>
+                <a class="btn btn-primary lift btn-lg scroll-to-top rounded ml-3 mr-3 lift" href="#page-top">
+			        <i class="fas fa-angle-up"></i>
+			    </a>
+            </footer>
+            <!-- End of Footer -->
+
+        </div>
+        <!-- End of Content Wrapper -->
+
+    </div>
+    <!-- End of Page Wrapper -->
+
+    <!-- Scroll to Top Button-->
+<div hidden>
+    <div class="row">
+<div class="col-md-6 mt-4">
+  
+    <div class="icon-box" style="text-align: right;">
+    <i class="ri-eye-line" style="color: #ffa76e;"></i>
+        <!-- hitwebcounter Code START -->
+    <a href="https://www.hitwebcounter.com" target="_blank">
+    <img src="https://hitwebcounter.com/counter/counter.php?page=7806575&style=0009&nbdigits=5&type=page&initCount=0" title="Free Counter" Alt="web counter"   border="0" />      
+    </a>
+   </div>
+  
+</div>
+
+</div>
+<div class="row "></div>
+<div class="icon-box" style="text-align: right;">
+  <!-- hitwebcounter Code START -->
+  <a href="https://www.hitwebcounter.com" target="_blank">
+	<img src="https://hitwebcounter.com/counter/counter.php?page=7806576&style=0009&nbdigits=5&type=ip&initCount=0" title="Free Counter" Alt="web counter"   border="0" />
+  </a>      
+</div>
+
+
+</div>
+</div>
+    
+
+
+
+    <!-- Bootstrap core JavaScript-->
+    <script src="../../vendor/jquery/jquery.min.js"></script>
+    <script src="../../vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+
+    <!-- Core plugin JavaScript-->
+    <script src="../../vendor/jquery-easing/jquery.easing.min.js"></script>
+
+    <!-- Custom scripts for all pages-->
+    <script src="../../js/sb-admin-2.min.js"></script>
+
+</body>
+
+</html>

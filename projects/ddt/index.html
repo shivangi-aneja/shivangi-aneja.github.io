@@ -1,0 +1,335 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>DDT</title>
+
+    <!-- Custom fonts for this template-->
+    <link href="../../vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
+    <link
+        href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i"
+        rel="stylesheet">
+     <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
+
+    <!-- Custom styles for this template-->
+    <!-- <link href="css/sb-admin-2.min.css" rel="stylesheet"> -->
+    <link href="../../css/styles.css" rel="stylesheet">
+    <script type="text/x-mathjax-config">
+  MathJax.Hub.Config({tex2jax: {inlineMath: [['$','$'], ['\\(','\\)']]}});
+</script>
+<script type="text/javascript"
+  src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+</script>
+
+</head>
+
+
+<body id="page-top">
+
+    <!-- Page Wrapper -->
+    <div id="wrapper">
+
+        
+        <!-- Content Wrapper -->
+        <div id="content-wrapper" class="d-flex flex-column">
+
+            <!-- Main Content -->
+            <div id="content">
+
+          
+
+                <!-- Begin Page Content -->
+                <div class="container-fluid">
+
+                    <!-- Page Heading -->
+                    <div class=" align-items-center justify-content-between mt-5 mb-4 text-center">
+                        <h1 class="h1 mb-0 text-gray-800 text-center">Generalized Zero and Few-Shot Transfer for Facial Forgery Detection</h1>
+                       
+                    </div>
+
+                    <div class=" align-items-center justify-content-between text-center">
+                        <!-- Content Row -->
+                    	<div class="row">
+                        <div class="col-xl-4 col-md-4 mb-4 align-items-center">	
+                        </div>
+
+                        <div class="col-xl-2 col-md-2 mb-4 align-items-center">
+                        	<h3> <a href="https://niessnerlab.org/members/shivangi_aneja/profile.html">Shivangi Aneja</a><sup>1</sup></h3>
+                        </div>
+                        <!-- <div class="col-xl-1 col-md-1 mb-4 align-items-center">	
+                        </div> -->
+                        
+                        <!-- <div class="col-xl-1 col-md-1 mb-4 align-items-center">	
+                        </div> -->
+                        <div class="col-xl-2 col-md-2 mb-4 align-items-center">
+                        	<h3> <a href="https://niessnerlab.org/members/matthias_niessner/profile.html">Matthias Nießner</a><sup>1</sup></h3>
+                        </div>
+                    	</div>
+                    </div>
+                    <div class=" align-items-center justify-content-between text-center">
+                        <!-- Content Row -->
+                    	<div class="row">
+                        <div class="col-xl-12 col-md-12 mb-12 align-items-center">	
+                            <h5><sup>1</sup>Visual Computing and AI Lab</h5>
+                            <h5>Technical University of Munich</h5>
+                        </div>
+
+                    	</div>
+                    </div>
+
+                     <div class=" align-items-center justify-content-between mt-2 mb-4 text-center">
+                        <!-- Content Row -->
+                    	<div class="row">
+                        <div class="col-xl-12 col-md-12 mb-4 align-items-center">
+                            	<div class="card-body">
+                            		<div class="no-gutters align-items-center ">
+
+                            		<div class="">
+
+                            	        <a class="btn btn-primary lift btn-xl ml-3 mr-3" href="https://arxiv.org/abs/2006.11863" target="_blank">
+										    <i class="ai ai-arxiv ai-1x mr-3"></i>ArXiv
+										</a>
+                            			
+                            			<a class="btn btn-primary lift btn-xl ml-3 mr-3" href="https://github.com/shivangi-aneja/Generalized-Zero-and-Few-Shot-Transfer-for-Facial-Forgery-Detection" target="_blank" >
+										    <i class="fab fa-github fa-1x mr-3"></i> GitHub
+										</a>
+
+                                        <a class="btn btn-primary lift btn-xl ml-3 mr-3" href="./assets/paper.pdf" target="_blank">
+										    <i class="fas fa-file-pdf fa-1x mr-3"></i> Paper
+										</a>
+                            			
+                            		</div>
+                            			
+                            		</div>
+                            	</div>
+                    </div>  
+
+                </div>
+
+
+                             <!-- Concept Figure -->
+                            <div class="card shadow mb-4">
+                                <div class="card-header py-3">
+                                    <h2 class="m-0 font-weight-bold text-primary">Abstract</h2>
+                                </div>
+                                <div class="card-body">
+                                    <p>We propose Deep Distribution Transfer (DDT), a new transfer learning approach to address the problem of zero and few-shot transfer in the context of facial forgery detection. We examine how well a model (pre-)trained with one forgery creation method generalizes towards a previously unseen manipulation technique or different dataset. To facilitate this transfer, we introduce a new mixture model-based loss formulation that learns a multi-modal distribution, with modes corresponding to class categories of the underlying data of the source forgery method. Our core idea is to first pre-train an encoder neural network, which maps each mode of this distribution to the respective class labels, i.e., real or fake images in the source domain by minimizing wasserstein distance between them. In order to transfer this model to a new domain, we associate a few target samples with one of the previously trained modes. In addition, we propose a spatial mixup augmentation strategy that further helps generalization across domains. We find this learning strategy to be surprisingly effective at domain transfer compared to a traditional classification or even state-of-the-art domain adaptation/few-shot learning methods. For instance, compared to the best baseline, our method improves the classification accuracy by 4.88% for zero-shot and by 8.38% for the few-shot case transferred from the FaceForensics++ to Dessa dataset.</p>
+                                </div>
+                            </div>
+
+                    
+                            <div class="card shadow mb-4">
+                                <div class="card-header py-3">
+                                    <h2 class="m-0 font-weight-bold text-primary">Method Overview</h2>
+                                </div>
+                                <div class="card-body">
+                                    <div class="text-center">
+                                        <img class="img-fluid px-3 px-sm-4 mt-3 mb-4 justify-content-between" 
+                                            src="imgs/ddt.gif" alt="">
+                                    </div>
+                                    <p>(a) Pre-training: $\theta$ encodes samples from the source domain into a latent distribution $q({z}_i|{x}_i)$. ${\epsilon}_c$ then maps class labels $c$ to the encoded distributions of the prototype multi-modal distribution ${\varepsilon}$. <br>
+                                        (b) Fine-tuning: the pre-trained encoder ${\theta}$ is used to map the few-shot samples from the target dataset with the same prototype multi-modal distribution ${\varepsilon}$, which learns a common subspace between samples across domains. 
+                                        <br>
+                                        (c) Test-time: a test sample ${x}_{test}$ is encoded into the latent distribution $q({z}_{test}|{x}_{test})$ by using the pre-trained encoder ${\theta}$. We then compute the distance of the latent code with respect to all components of the distribution, and assign a class label based on the component it is closest to.</p>
+                                </div>
+                            </div>
+                    
+
+
+                    <!-- Dataset Details -->
+                    <div class="card shadow mb-4">
+                        <div class="card-header py-3">
+                            <h2 class="m-0 font-weight-bold text-primary">Datasets</h2>
+                        </div>
+                        <div class="card-body">
+                            
+                            <p class="font-weight-bold">Since our goal is to generalize across datasets and methods, we experimented on datasets with sufficient diversity. Please contact the corresponding authors to get access to the datasets. However, the AIF datasets is donated by <a href='https://aifoundation.com/'>AI Foundation</a> to us and can be downloaded <a href='https://www.dropbox.com/s/arnx7s13hm129ra/AIF.zip'>here</a>
+
+                                <div class="row">
+
+                                    <figure class="figure col-xl-1 col-md-1">
+                                    </figure>
+                                    <figure class="figure col-xl-2 col-md-2">
+                                      <img src="imgs/ff++.jpg" class="figure-img img-fluid rounded" alt="A generic square placeholder image with rounded corners in a figure.">
+                                      <figcaption class="figure-caption"><h5><a href="https://arxiv.org/abs/1901.08971">FaceForensics++</a> </h5></figcaption>
+                                    </figure>
+
+                                    <figure class="figure col-xl-2 col-md-2">
+                                      <img src="imgs/google_dfdc.jpg" class="figure-img img-fluid rounded" alt="A generic square placeholder image with rounded corners in a figure.">
+                                      <figcaption class="figure-caption"><h5><a href="https://ai.googleblog.com/2019/09/contributing-data-to-deepfake-detection.html">Google DFD</a> </h5></figcaption>
+                                    </figure>
+
+
+                                    <figure class="figure col-xl-2 col-md-2">
+                                      <img src="imgs/dessa.jpg" class="figure-img img-fluid rounded" alt="A generic square placeholder image with rounded corners in a figure.">
+                                      <figcaption class="figure-caption"><h5><a href="https://github.com/dessa-oss/DeepFake-Detection">Dessa</a> </h5></figcaption>
+                                    </figure>
+
+                                    <figure class="figure col-xl-2 col-md-2">
+                                      <img src="imgs/celeb_df.jpg" class="figure-img img-fluid rounded" alt="A generic square placeholder image with rounded corners in a figure.">
+                                      <figcaption class="figure-caption"><h5><a href="https://arxiv.org/pdf/1909.12962.pdf">Celeb DF</a> </h5></figcaption>
+                                    </figure>
+
+                                    <figure class="figure col-xl-2 col-md-2">
+                                      <img src="imgs/aif.jpg" class="figure-img img-fluid rounded" alt="A generic square placeholder image with rounded corners in a figure.">
+                                      <figcaption class="figure-caption"><h5><a href="https://www.dropbox.com/s/arnx7s13hm129ra/AIF.zip">AIF</a> </h5></figcaption>
+                                    </figure>
+
+
+                                </div>
+                                Figure shows sample frames from the datasets used for evaluation of our experiments. The top row shows the frames from the real videos and bottom row shows the frames from the corresponding fake videos for paired datasets (FaceForensics++ and Google DFD) and randomly selected videos for unpaired datasets (Dessa, AIF, and Celeb DF). For FaceForensics++, the frames from DF manipulation method are shown.
+                            </div>
+
+                        </div>
+                  
+
+
+                    <!-- Results -->
+                    <div class="card shadow mb-4">
+                        <div class="card-header py-3">
+                            <h2 class="m-0 font-weight-bold text-primary">Results</h2>
+                        </div>
+                        <h6 class="m-0 font-weight-bold text-primary mt-3">Zero-Shot Transfer </h6>
+                        <div class="card-body">
+                            
+                            <div class="row">
+                                <img class="img-fluid px-3 px-sm-4 mt-3 mb-4 col-xl-12 col-lg-12 col-md-12 col-sm-12" src="imgs/zero_shot.png">
+                            </div>
+                            
+
+                            
+                            <p> Zero-shot classification accuracy from FF++ to four other datasets: although there is a significant shift in domains (e.g., Google DFDC and Dessa contain mostly frontal faces in contrast to AIF which varies much more in pose and lightning), our method achieves  transfer performance significantly higher than all baselines (last column).</p>
+                        </div>
+					
+
+					<h6 class="m-0 font-weight-bold text-primary">Few-Shot Transfer</h6>
+
+                    <div class="row">
+
+                        <div class="row">
+                                <div class=" col-lg-1 col-md-1 col-sm-1"></div>
+                                <img class="img-fluid px-3 px-sm-4 mt-3 mb-4 col-xl-3 col-lg-3 col-md-3 col-sm-3" src="imgs/few_shot_aif.jpg">
+                                <img class="img-fluid px-3 px-sm-4 mt-3 mb-4 col-xl-3 col-lg-3 col-md-3 col-sm-3" src="imgs/few_shot_dessa.jpg">
+                                <img class="img-fluid px-3 px-sm-4 mt-3 mb-4 col-xl-3 col-lg-3 col-md-3 col-sm-3" src="imgs/few_shot_celeb.jpg">
+                               
+                                
+                            </div>
+
+                    </div>
+
+                     <div class="row">
+                        <div class=" col-lg-1 col-md-1 col-sm-1"></div>
+                                <img class="img-fluid px-3 px-sm-4 mt-3 mb-4 col-xl-10 col-lg-10 col-md-10 col-sm-10 ml-4" src="imgs/legends_flat.jpg">
+                     </div>
+                       
+			
+
+                    <div class="card shadow">
+                                <div class="card-header py-3">
+                                    <h2 class="m-0 font-weight-bold text-primary">BibTeX</h2>
+                                </div>
+                                <div class="card-body">
+                                    <div class="text-left">
+                                    	<p>If you find this work useful for your research, please consider citing:</p>
+                                        <pre><code>@inproceedings{aneja2020generalized,
+    title={Generalized {Z}ero and {F}ew-{S}hot {T}ransfer for {F}acial {F}orgery {D}etection},
+    author={Shivangi Aneja and Matthias Nießner},
+    booktitle={ArXiv preprint arXiv:2006.11863},
+    year={2020}
+}
+															</code></pre>
+                                    </div>
+                                    
+                                </div>
+                            </div>
+
+                </div>
+                <!-- /.container-fluid -->
+
+            </div>
+            <!-- End of Main Content -->
+
+            <!-- Footer -->
+           <!--  <footer class="sticky-footer bg-white">
+                <div class="container my-auto">
+                    <div class="copyright text-center my-auto">
+                        <span>Copyright &copy; Your Website 2020</span>
+                    </div>
+                </div>
+            </footer> -->
+            <footer class="footer mt-auto footer-light">
+                <div class="container-fluid">
+                    <div class="copyright text-center my-auto">
+                        <span>Copyright &copy; Shivangi Aneja 2021</span><br>
+                        <span>Made with <span class="text-primary"><a href="https://startbootstrap.com/theme/sb-admin-2" >Bootstrap</a></span></span>
+                    </div>
+                </div>
+                <a class="btn btn-primary lift btn-lg scroll-to-top rounded ml-3 mr-3 lift" href="#page-top">
+			        <i class="fas fa-angle-up"></i>
+			    </a>
+            </footer>
+            <!-- End of Footer -->
+
+        </div>
+        <!-- End of Content Wrapper -->
+
+    </div>
+    <!-- End of Page Wrapper -->
+
+    <!-- Scroll to Top Button-->
+<div hidden>
+    <div class="row">
+<div class="col-md-6 mt-4">
+  
+    <div class="icon-box" style="text-align: right;">
+    <i class="ri-eye-line" style="color: #ffa76e;"></i>
+        <!-- hitwebcounter Code START -->
+    <a href="https://www.hitwebcounter.com" target="_blank">
+    <img src="https://hitwebcounter.com/counter/counter.php?page=7806575&style=0009&nbdigits=5&type=page&initCount=0" title="Free Counter" Alt="web counter"   border="0" />      
+    </a>
+   </div>
+  
+</div>
+
+</div>
+<div class="row "></div>
+<div class="icon-box" style="text-align: right;">
+  <!-- hitwebcounter Code START -->
+  <a href="https://www.hitwebcounter.com" target="_blank">
+	<img src="https://hitwebcounter.com/counter/counter.php?page=7806576&style=0009&nbdigits=5&type=ip&initCount=0" title="Free Counter" Alt="web counter"   border="0" />
+  </a>      
+</div>
+
+
+</div>
+</div>
+    
+
+
+
+    <!-- Bootstrap core JavaScript-->
+    <script src="../../vendor/jquery/jquery.min.js"></script>
+    <script src="../../vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+
+    <!-- Core plugin JavaScript-->
+    <script src="../../vendor/jquery-easing/jquery.easing.min.js"></script>
+
+    <!-- Custom scripts for all pages-->
+    <script src="../../js/sb-admin-2.min.js"></script>
+
+    <!-- Page level plugins -->
+    <script src="../../vendor/chart.js/Chart.min.js"></script>
+
+    <!-- Page level custom scripts -->
+    <script src="../../js/demo/chart-bar-demo.js"></script>
+
+</body>
+
+</html>
