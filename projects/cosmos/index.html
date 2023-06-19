@@ -86,141 +86,127 @@
                     	</div>
                     </div>
 
-                     <div class=" align-items-center justify-content-between mt-2 mb-4 text-center">
+                     <div class=" align-items-center justify-content-between text-center">
                         <!-- Content Row -->
                     	<div class="row">
                         <div class="col-xl-12 col-md-12 mb-4 align-items-center">
                             	<div class="card-body">
                             		<div class="no-gutters align-items-center ">
-
                             		<div class="">
                             	
-                            			<a class="btn btn-primary lift btn-xl ml-3 mr-3" href="https://docs.google.com/forms/d/13kJQ2wlv7sxyXoaM1Ddon6Nq7dUJY_oftl-6xzwTGow" target="_blank">
+                            			<a class="btn btn-primary lift btn-lg ml-3 mr-3 rounded-pill" href="https://docs.google.com/forms/d/13kJQ2wlv7sxyXoaM1Ddon6Nq7dUJY_oftl-6xzwTGow" target="_blank">
 										    <i class="fas fa-database fa-1x mr-3"></i>Dataset
 										</a>
                             			
-                            			<a class="btn btn-primary lift btn-xl ml-3 mr-3" href="https://arxiv.org/abs/2101.06278" target="_blank">
+                            			<a class="btn btn-primary lift btn-lg ml-3 mr-3 rounded-pill" href="https://arxiv.org/abs/2101.06278" target="_blank">
 										    <i class="ai ai-arxiv ai-1x mr-3"></i>ArXiv
 										</a>
-                            			<a class="btn btn-primary lift btn-xl ml-3 mr-3" href="https://youtu.be/riI3Cl2xy10" target="_blank">
+                            			<a class="btn btn-primary lift btn-lg ml-3 mr-3 rounded-pill" href="https://youtu.be/riI3Cl2xy10" target="_blank">
 										    <i class="fab fa-youtube fa-1x mr-3"></i> Video
 										</a>
                             			
-                            			<a class="btn btn-primary lift btn-xl ml-3 mr-3" href="https://github.com/shivangi-aneja/COSMOS" target="_blank">
+                            			<a class="btn btn-primary lift btn-lg ml-3 mr-3 rounded-pill" href="https://github.com/shivangi-aneja/COSMOS" target="_blank">
 										    <i class="fab fa-github fa-1x mr-3"></i> GitHub
 										</a>
 
-                                        <a class="btn btn-primary lift btn-xl ml-3 mr-3" href="./assets/cosmos_paper.pdf" target="_blank">
+                                        <a class="btn btn-primary lift btn-lg ml-3 mr-3 rounded-pill" href="./assets/cosmos_paper.pdf" target="_blank">
 										    <i class="fas fa-file-pdf fa-1x mr-3"></i> Paper
 										</a>
                             			
                             		</div>
                             			
                             		</div>
-                            	</div>
-                    </div>  
 
-                </div>
-
-
-                 <!-- Concept Figure -->
-                            <div class="card shadow mb-4">
-                                <div class="card-header py-3">
-                                    <h2 class="m-0 font-weight-bold text-primary">Concept Figure</h2>
-                                </div>
-                                <div class="card-body">
-                                    <div class="text-center">
-                                        <img class="img-fluid px-3 px-sm-4 mt-3 mb-4 justify-content-between" 
-                                            src="img/teaser_fig.gif" alt="">
-                                    </div>
-                                    <p>Our method takes as input an image and two captions from different sources, and we predict whether the image has been used out of context or not. We show that it is critical to the task to ground the captions w.r.t. image, and it is insufficient to consider only the captions; e.g., a language-only model would incorrectly classify the right image to be out of context. To this end, we propose a new self-supervised learning strategy allowing to make fairly accurate out-of-context predictions.</p>
-                                </div>
-                            </div>
-
-                    
-                    <!-- Concept Figure -->
-                            <div class="card shadow mb-4">
-                                <div class="card-header py-3">
-                                    <h2 class="m-0 font-weight-bold text-primary">Abstract</h2>
-                                </div>
-                                <div class="card-body">
-                                    
-                                    <p>Despite the recent attention to DeepFakes, one of the most prevalent ways to mislead audiences on social media is the use of unaltered images in a new but false context. To address these challenges and support fact-checkers, we propose a new method that automatically detects out-of-context image and text pairs. Our key insight is to leverage grounding of image with text to distinguish out-of-context scenarios that cannot be disambiguated with language alone. We propose a self-supervised training strategy where we only need a set of captioned images. At train time, our method learns to selectively align individual objects in an image with textual claims, without explicit supervision. At test time, we check if both captions correspond to same object(s) in the image but are semantically different, which allows us to make fairly accurate out-of-context predictions. Our method achieves 85% detection accuracy ouperforming language only baseline. To facilitate benchmarking of this task, we create a large-scale dataset of 200K images  with 450K textual captions from a variety of news websites, blogs, and social media posts. </p>
-                                    <div class="text-center">
-                                        <img class="img-fluid px-3 px-sm-4 mt-3 mb-4 justify-content-between col-lg-6 col-sm-12 col-xl-6 col-md-12" 
-                                            src="img/ooc_vs_nooc.jpeg" alt="">
-                                    </div>
-                                </div>
-                            </div>
-
-
-                             <div class="card shadow mb-4">
-                                <div class="card-header py-3">
-                                    <h2 class="m-0 font-weight-bold text-primary">Video</h2>
-                                </div>
-                                <div class="card-body">
                                     <div class="row">
-                        			<div class="mb-4 col-xl-2 col-lg-2"></div>
-	                            	<div class="mb-4 col-xl-8 col-lg-8">
+                             <div class="col-xl-2 col-lg-2"></div>
+
+                             <div class="col-xl-8 col-lg-8">
+
+                                    <!-- Concept Figure -->
+                                    <div>
+                                        <div>
+                                            <h2 class="m-0 font-weight-bold text-dark mt-5">COSMOS: Concept Figure</h2>
+                                        </div>
+                                        <div class="card-body">
+                                            <div class="text-center">
+                                                <img class="img-fluid px-3 px-sm-4 mt-3 mb-4 justify-content-between"
+                                                    src="img/teaser_fig.gif" alt="">
+                                            </div>
+                                            <p>Our method takes as input an image and two captions from different sources, and we predict whether the image has been used out of context or not. We show that it is critical to the task to ground the captions w.r.t. image, and it is insufficient to consider only the captions; e.g., a language-only model would incorrectly classify the right image to be out of context. To this end, we propose a new self-supervised learning strategy allowing to make fairly accurate out-of-context predictions.</p>
+                                        </div>
+                                    </div>
+
+
+                                    <!-- Concept Figure -->
+                                    <div>
+                                        <div>
+                                            <h2 class="m-0 font-weight-bold text-dark mt-4">ABSTRACT</h2>
+                                        </div>
+                                        <div class="card-body">
+                                        <p>Despite the recent attention to DeepFakes, one of the most prevalent ways to mislead audiences on social media is the use of unaltered images in a new but false context. To address these challenges and support fact-checkers, we propose a new method that automatically detects out-of-context image and text pairs. Our key insight is to leverage grounding of image with text to distinguish out-of-context scenarios that cannot be disambiguated with language alone. We propose a self-supervised training strategy where we only need a set of captioned images. At train time, our method learns to selectively align individual objects in an image with textual claims, without explicit supervision. At test time, we check if both captions correspond to same object(s) in the image but are semantically different, which allows us to make fairly accurate out-of-context predictions. Our method achieves 85% detection accuracy ouperforming language only baseline. To facilitate benchmarking of this task, we create a large-scale dataset of 200K images  with 450K textual captions from a variety of news websites, blogs, and social media posts. </p>
+                                        <div class="text-center">
+                                            <img class="img-fluid px-3 px-sm-4 mt-3 mb-4 justify-content-between col-lg-12 col-sm-12 col-xl-12 col-md-12"
+                                                src="img/ooc_vs_nooc.jpeg" alt="">
+                                        </div>
+                                    </div>
+                                </div>
+
+
+                                <!-- Video-->
+                                <div>
+                                <div>
+                                    <h2 class="m-0 font-weight-bold text-dark mt-4">VIDEO</h2>
+                                </div>
+                                <div class="card-body">
+<!--                                    <div class="row">-->
+<!--                        			<div class="mb-4 col-xl-2 col-lg-2"></div>-->
+<!--	                            	<div class="mb-4 col-xl-8 col-lg-8">-->
                                     <div class="embed-responsive embed-responsive-16by9">
 									  <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/riI3Cl2xy10" allowfullscreen></iframe>
 									</div>
-									<div class="mb-4 col-xl-2 col-lg-2"></div>
+<!--									<div class="mb-4 col-xl-2 col-lg-2"></div>-->
 								</div>
                                 </div>
-                            </div>
-
-                    
 
 
-                    <!-- Dataset Details -->
-                    <div class="card shadow mb-4">
-                        <div class="card-header py-3">
-                            <h2 class="m-0 font-weight-bold text-primary">Dataset Details</h2>
+                                <!-- Dataset Details -->
+                                <div>
+                                    <div>
+                                        <h2 class="m-0 font-weight-bold text-dark mt-5">Dataset Details</h2>
+                                    </div>
+                                    <div class="card-body">
+                                        <p class="font-weight-bold">We obtained our images primarily from news channels (New York Times, CNN, Reuters, ABC, PBS, NBCLA, AP News, Sky News, Telegraph, Time, DenverPost, Washington Post, CBC News, Guardian, Herald Sun, Independent, CS Gazette, BBC) and fact-checking website <a href="https://www.snopes.com/">Snopes</a>. We scraped images from a wide-variety of articles, with special focus on topics where misinformation spread is prominent, as shown in the figure below. We created a large dataset of 200K images that are matched with 450K textual captions from a variety of news websites, blogs, and social media posts. </p>
+                                        <div class="row">
+                                            <!-- Bar Chart -->
+                                            <div class="mb-4 col-xl-12 col-lg-12">
+                                                    <div class="chart-bar">
+                                                        <canvas id="BarChartDataset"></canvas>
+                                                    </div>
+                                                    <hr>
+                                                    <h6 class="m-0 font-weight-bold text-primary">Category-Wise Frequency Distribution of the Dataset </h6>
+                                            </div>
+                                        </div>
+                                </div>
+                    </div>
+
+
+                                 <!-- Results -->
+                                 <div>
+                        <div>
+                            <h2 class="m-0 font-weight-bold text-dark">Results</h2>
                         </div>
+                        <h6 class="m-0 font-weight-bold text-dark mt-4">Qualitative Results </h6>
                         <div class="card-body">
-                            
-                            <p class="font-weight-bold">We obtained our images primarily from news channels (New York Times, CNN, Reuters, ABC, PBS, NBCLA, AP News, Sky News, Telegraph, Time, DenverPost, Washington Post, CBC News, Guardian, Herald Sun, Independent, CS Gazette, BBC) and fact-checking website <a href="https://www.snopes.com/">Snopes</a>. We scraped images from a wide-variety of articles, with special focus on topics where misinformation spread is prominent, as shown in the figure below. We created a large dataset of 200K images that are matched with 450K textual captions from a variety of news websites, blogs, and social media posts. </p>
-
-                            
-
 
                             <div class="row">
-                        		<!-- Bar Chart -->
-	                            <div class="mb-4 col-xl-12 col-lg-12">
-	                               
-	                                    
-	                              
-	                                
-	                                    <div class="chart-bar">
-	                                        <canvas id="BarChartDataset"></canvas>
-	                                    </div>
-	                                    <hr>
-	                                    <h6 class="m-0 font-weight-bold text-primary">Category-Wise Frequency Distribution of the Dataset </h6>
-	                            </div>
-                            </div>
-                            </div>
-                        </div>
-                  
-
-
-                    <!-- Results -->
-                    <div class="card shadow mb-4">
-                        <div class="card-header py-3">
-                            <h2 class="m-0 font-weight-bold text-primary">Results</h2>
-                        </div>
-                        <h6 class="m-0 font-weight-bold text-primary mt-3">Qualitative Results </h6>
-                        <div class="card-body">
-                            
-                            <div class="row">
-                                <img class="img-fluid px-3 px-sm-4 mt-3 mb-4 col-xl-4 col-lg-4 col-md-4 col-sm-4 lift" 
+                                <img class="img-fluid px-3 px-sm-4 mt-3 mb-4 col-xl-4 col-lg-4 col-md-4 col-sm-4 lift"
                                     src="img/ooc_1.jpeg" alt="">
-                               <img class="img-fluid px-3 px-sm-4 mt-3 mb-4 col-xl-4 col-lg-4 col-md-4 col-sm-4 lift" 
+                               <img class="img-fluid px-3 px-sm-4 mt-3 mb-4 col-xl-4 col-lg-4 col-md-4 col-sm-4 lift"
                                 src="img/ooc_2.jpeg" alt="">
                                 <img class="img-fluid px-3 px-sm-4 mt-3 mb-4 col-xl-4 col-lg-4 col-md-4 col-sm-4 lift"
                                 src="img/ooc_3.jpeg" alt="">
                             </div>
-                            
+
                             <div class="row">
                                 <img class="img-fluid px-3 px-sm-4 mt-3 mb-4 col-xl-4 col-lg-4 col-md-4 col-sm-4 lift"
                                     src="img/nooc_1.jpeg" alt="">
@@ -230,43 +216,51 @@
                                 src="img/nooc_3.jpeg" alt="">
                             </div>
 
-                            
+
                             <p> Qualitative results showing visual grounding of captions with the objects in the image. The top row show the grounding for out-of-context pairs and the bottom row show the grounding for pairs which are not out-of-context. We show object-caption scores for two captions per image. The captions with <span class="text-success">green</span> border show the true captions and the captions with <span class="text-danger">red</span> border show the false caption. Scores indicate association of the most relevant object in the image with the caption.</p>
                         </div>
-					
-					<h6 class="m-0 font-weight-bold text-primary">Comparison with alternate baselines </h6>
-                       
+
+					<h6 class="m-0 font-weight-bold text-dark">Comparison with alternate baselines </h6>
+
 					<div class=" mb-4">
                         <div class="chart-bar">
                                 <canvas id="BarChartResults"></canvas>
                             </div>
                             <hr>
-                            
+
                             <p>We compare our method against several rumor and fake news detection methods. Our method outperforms all other methods, resulting in 85% out-of-context detection accuracy.</br>
 
                              Please refer to our paper for more details.</p>
                         </div>
                     </div>
 
-                    <div class="card shadow">
-                                <div class="card-header py-3">
-                                    <h2 class="m-0 font-weight-bold text-primary">BibTeX</h2>
+                                <!-- Bibtex-->
+                                 <div>
+                                <div>
+                                    <h2 class="m-0 font-weight-bold text-dark mt-5">BibTeX</h2>
                                 </div>
                                 <div class="card-body">
                                     <div class="text-left">
                                     	<p>If you find this work useful for your research, please consider citing:</p>
                                         <pre><code>@inproceedings{aneja2021cosmos,
-    title={{COSMOS}: Catching {O}ut-of-{C}ontext {M}isinformation with {S}elf-{S}upervised {L}earning}, 
+    title={{COSMOS}: Catching {O}ut-of-{C}ontext {M}isinformation with {S}elf-{S}upervised {L}earning},
     author={Shivangi Aneja and Chris Bregler and Matthias Nie{\ss}ner},
     booktitle={ArXiv preprint arXiv:2101.06278},
     year={2021}
 }
-					
+
 										</code></pre>
                                     </div>
-                                    
+
                                 </div>
                             </div>
+
+
+                             </div>
+                            	</div>
+                    </div>
+                        </div>
+                     </div>
 
                 </div>
                 <!-- /.container-fluid -->
@@ -285,7 +279,7 @@
             <footer class="footer mt-auto footer-light">
                 <div class="container-fluid">
                     <div class="copyright text-center my-auto">
-                        <span>Copyright &copy; Shivangi Aneja 2021</span><br>
+                        <span>Copyright &copy; Shivangi Aneja 2023</span><br>
                         <span>Made with <span class="text-primary"><a href="https://startbootstrap.com/theme/sb-admin-2" >Bootstrap</a></span></span>
                     </div>
                 </div>

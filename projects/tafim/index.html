@@ -94,151 +94,157 @@
                         <div class="col-xl-12 col-md-12 mb-4 align-items-center">
                             	<div class="card-body">
                             		<div class="no-gutters align-items-center ">
-
-                            		<div class="">
+                            		<div>
                             			
-                            			<a class="btn btn-primary lift btn-xl ml-3 mr-3" href="https://arxiv.org/abs/2112.09151" target="_blank">
+                            			<a class="btn btn-primary lift btn-lg ml-3 mr-3 rounded-pill" href="https://arxiv.org/abs/2112.09151" target="_blank">
 										    <i class="ai ai-arxiv ai-1x mr-3"></i>ArXiv
 										</a>
-                            			<a class="btn btn-primary lift btn-xl ml-3 mr-3" href="https://youtu.be/11VMOJI7tKg" target="_blank">
+                            			<a class="btn btn-primary lift btn-lg ml-3 mr-3 rounded-pill" href="https://youtu.be/11VMOJI7tKg" target="_blank">
 										    <i class="fab fa-youtube fa-1x mr-3"></i> Video
 										</a>
                             			
-                            			<a class="btn btn-primary lift btn-xl ml-3 mr-3" href="https://github.com/shivangi-aneja/TAFIM" target="_blank">
+                            			<a class="btn btn-primary lift btn-lg ml-3 mr-3 rounded-pill" href="https://github.com/shivangi-aneja/TAFIM" target="_blank">
 										    <i class="fab fa-github fa-1x mr-3"></i> GitHub
 										</a>
 
-                                        <a class="btn btn-primary lift btn-xl ml-3 mr-3" href="assets/tafim.pdf" target="_blank">
+                                        <a class="btn btn-primary lift btn-lg ml-3 mr-3 rounded-pill" href="assets/tafim.pdf" target="_blank">
 										    <i class="fas fa-file-pdf fa-1x mr-3"></i> Paper
 										</a>
                             			
                             		</div>
-                            			
                             		</div>
                             	</div>
-                    </div>  
 
-                </div>
+                                <div class="row">
+                                    <div class="col-xl-2 col-lg-2"></div>
+
+                                    <div class="col-xl-8 col-lg-8">
 
 
-                 <!-- Concept Figure -->
-                            <div class="card shadow mb-4">
-                                <div class="card-header py-3">
-                                    <h2 class="m-0 font-weight-bold text-primary">Method Overview</h2>
-                                </div>
-                                <div class="card-body">
-                                    <div class="text-center">
-                                        <img class="img-fluid px-3 px-sm-4 mt-3 mb-4 justify-content-between" 
-                                            src="img/method.gif" alt="">
+                                    <!-- Concept Figure -->
+                                    <div>
+                                        <div>
+                                            <h2 class="m-0 font-weight-bold text-dark mt-5">Method Overview</h2>
+                                        </div>
+                                        <div class="card-body">
+                                            <div class="text-center">
+                                                <img class="img-fluid px-3 px-sm-4 mt-3 mb-4 justify-content-between"
+                                                    src="img/method.gif" alt="">
+                                            </div>
+                                            <p>We propose a novel approach to protect facial images from several image manipulation models simultaneously. Our method works by generating quasi-imperceptible perturbations using a learned neural network. These perturbations when added to real images force the face manipulation models to produce a predefined manipulation target as output. Compared to existing methods that require an image-specific optimization, we propose to leverage a neural network to encode the generation of image specific perturbations, which is several orders of magnitude faster and can be used for real-time applications. In addition, our generated perturbations are robust to jpeg compression.</p>
+                                        </div>
                                     </div>
-                                    <p>We propose a novel approach to protect facial images from several image manipulation models simultaneously. Our method works by generating quasi-imperceptible perturbations using a learned neural network. These perturbations when added to real images force the face manipulation models to produce a predefined manipulation target as output. Compared to existing methods that require an image-specific optimization, we propose to leverage a neural network to encode the generation of image specific perturbations, which is several orders of magnitude faster and can be used for real-time applications. In addition, our generated perturbations are robust to jpeg compression.</p>
-                                </div>
-                            </div>
 
-                    
-                    <!-- Concept Figure -->
-                            <div class="card shadow mb-4">
-                                <div class="card-header py-3">
-                                    <h2 class="m-0 font-weight-bold text-primary">Abstract</h2>
-                                </div>
-                                <div class="card-body">
-                                    
-                                    <p>Face image manipulation methods, despite having many beneficial applications in computer graphics, can also raise concerns when affecting an individual's privacy or spreading disinformation. In this work, we propose a proactive defense to prevent face manipulation from happening in the first place. To this end, we introduce a novel data-driven approach that produces image-specific perturbations which are embedded in the original images. The key idea is that these protected images prevent face manipulation by causing the manipulation model to produce a predefined manipulation target (uniformly colored output image in our case) instead of the actual manipulation. In addition, we propose to leverage a differentiable compression approximation, hence making generated perturbations robust to common image compression. In order to prevent against multiple manipulation methods simultaneously, we further propose a novel attention-based fusion of manipulation-specific perturbations. Compared to traditional adversarial attacks that optimize noise patterns for each image individually, our generalized model only needs a single forward pass, thus running orders of magnitude faster and allowing for easy integration in image processing stacks, even on resource-constrained devices like smartphones.  </p>
-                                    <div class="text-center">
-                                        <img class="img-fluid px-3 px-sm-4 mt-3 mb-4 justify-content-between col-lg-6 col-sm-12 col-xl-6 col-md-12" 
-                                            src="img/ooc_vs_nooc.jpeg" alt="">
+                                    <!-- Abstract -->
+                                    <div>
+                                        <div>
+                                            <h2 class="m-0 font-weight-bold text-dark mt-5">ABSTRACT</h2>
+                                        </div>
+                                        <div class="card-body">
+
+                                            <p>Face image manipulation methods, despite having many beneficial applications in computer graphics, can also raise concerns when affecting an individual's privacy or spreading disinformation. In this work, we propose a proactive defense to prevent face manipulation from happening in the first place. To this end, we introduce a novel data-driven approach that produces image-specific perturbations which are embedded in the original images. The key idea is that these protected images prevent face manipulation by causing the manipulation model to produce a predefined manipulation target (uniformly colored output image in our case) instead of the actual manipulation. In addition, we propose to leverage a differentiable compression approximation, hence making generated perturbations robust to common image compression. In order to prevent against multiple manipulation methods simultaneously, we further propose a novel attention-based fusion of manipulation-specific perturbations. Compared to traditional adversarial attacks that optimize noise patterns for each image individually, our generalized model only needs a single forward pass, thus running orders of magnitude faster and allowing for easy integration in image processing stacks, even on resource-constrained devices like smartphones.  </p>
+                                            <div class="text-center">
+                                                <img class="img-fluid px-3 px-sm-4 mt-3 mb-4 justify-content-between col-lg-6 col-sm-12 col-xl-6 col-md-12"
+                                                    src="img/ooc_vs_nooc.jpeg" alt="">
+                                            </div>
+                                        </div>
                                     </div>
-                                </div>
-                            </div>
 
 
-                             <div class="card shadow mb-4">
-                                <div class="card-header py-3">
-                                    <h2 class="m-0 font-weight-bold text-primary">Video</h2>
-                                </div>
-                                <div class="card-body">
-                                    <div class="row">
-                        			<div class="mb-4 col-xl-2 col-lg-2"></div>
-	                            	<div class="mb-4 col-xl-8 col-lg-8">
-                                    <div class="embed-responsive embed-responsive-16by9">
-									  <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/11VMOJI7tKg" allowfullscreen></iframe>
-									</div>
-									<div class="mb-4 col-xl-2 col-lg-2"></div>
-								</div>
-                                </div>
-                            </div>
-                  
+                                    <!-- Video-->
+                                    <div>
+                                        <div>
+                                            <h2 class="m-0 font-weight-bold text-dark">VIDEO</h2>
+                                        </div>
+                                        <div class="card-body">
+<!--                                            <div class="row">-->
+<!--                                            <div class="mb-4 col-xl-2 col-lg-2"></div>-->
+<!--                                            <div class="mb-4 col-xl-8 col-lg-8">-->
+                                            <div class="embed-responsive embed-responsive-16by9">
+                                              <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/11VMOJI7tKg" allowfullscreen></iframe>
+<!--                                            </div>-->
+<!--                                            <div class="mb-4 col-xl-2 col-lg-2"></div>-->
+                                        </div>
+                                        </div>
+                                    </div>
 
-
-                    <!-- Results -->
-                    <div class="card shadow mb-4">
-                        <div class="card-header py-3">
-                            <h2 class="m-0 font-weight-bold text-primary">Results</h2>
+                                        <!-- Results -->
+                    <div>
+                        <div>
+                            <h2 class="m-0 font-weight-bold text-dark mt-5">RESULTS</h2>
                         </div>
-                        <h3 class="m-0 font-weight-bold text-primary mt-3">Comparison with Baselines</h3>
+                        <h3 class="m-0 font-weight-bold text-dark mt-5">Comparison with Baselines</h3>
                         <div class="card-body">
-                            
+
                             <div class="row">
-                                <video class="img-fluid px-3 px-sm-3 mt-6 mb-6 col-xl-6 col-lg-6 col-md-6 col-sm-6" id="replay-video" controls="" muted="" preload="" width="60%"> <source src="assets/self_recon.mp4" type="video/mp4">
+                                <video class="img-fluid px-3 px-sm-3 mt-6 mb-6 col-xl-6 col-lg-6 col-md-6 col-sm-6" controls="" muted="" preload="" width="60%"> <source src="assets/self_recon.mp4" type="video/mp4">
                                 </video>
-                                <video class="img-fluid px-6 px-sm-6 mt-6 mb-6 col-xl-6 col-lg-6 col-md-6 col-sm-6" id="replay-video" controls="" muted="" preload="" width="60%"> <source src="assets/style_mixing.mp4" type="video/mp4">
+                                <video class="img-fluid px-6 px-sm-6 mt-6 mb-6 col-xl-6 col-lg-6 col-md-6 col-sm-6" controls="" muted="" preload="" width="60%"> <source src="assets/style_mixing.mp4" type="video/mp4">
                                 </video>
                             </div>
                         </div>
 
 
                      <div class="mt-2"></div>
-					
-					<h3 class="m-0 font-weight-bold text-primary">Robustness to Compression </h3>
 
-                   
+					<h3 class="m-0 font-weight-bold text-dark mt-5 ">Robustness to Compression </h3>
+
+
 
                     <div class="card-body">
-                            
+
                             <div class="row">
                                 <div class="col-xl-0 col-lg-3 col-md-3 col-sm-0"></div>
-                                <video class="img-fluid px-3 px-sm-3 mt-6 mb-6 col-xl-6 col-lg-6 col-md-6 col-sm-6" id="replay-video" controls="" muted="" preload="" width="60%"> <source src="assets/compression.mp4" type="video/mp4">
+                                <video class="img-fluid px-3 px-sm-3 mb-6 col-xl-6 col-lg-6 col-md-6 col-sm-6" controls="" muted="" preload="" width="60%"> <source src="assets/compression.mp4" type="video/mp4">
                                 </video>
                                 <div class="col-xl-0 col-lg-3 col-md-3 col-sm-0"></div>
-                                
+
                             </div>
                         </div>
-                       
-					<h3 class="m-0 font-weight-bold text-primary mt-3">Multiple Manipulation Models</h3>
+
+					<h3 class="m-0 font-weight-bold text-dark mt-5">Multiple Manipulation Models</h3>
                         <div class="card-body">
-                            
+
                             <div class="row">
                                 <div class="col-xl-0 col-lg-3 col-md-3 col-sm-0"></div>
                                 <video class="img-fluid px-3 px-sm-3 mt-6 mb-6 col-xl-6 col-lg-6 col-md-6 col-sm-6" id="replay-video" controls="" muted="" preload="" width="60%"> <source src="assets/multiple_methods.mp4" type="video/mp4">
                                 </video>
                                 <div class="col-xl-0 col-lg-3 col-md-3 col-sm-0"></div>
-                                
+
                             </div>
                         </div>
 
-                    <div class="card shadow">
-                                <div class="card-header py-3">
-                                    <h2 class="m-0 font-weight-bold text-primary">BibTeX</h2>
+                    <div>
+                                <div>
+                                    <h2 class="m-0 font-weight-bold text-dark mt-5">BibTeX</h2>
                                 </div>
                                 <div class="card-body">
                                     <div class="text-left">
                                     	<p>If you find this work useful for your research, please consider citing:</p>
-                                        <pre><code>@inproceedings{aneja2021tafim,
-    title={{TAFIM}: Targeted {A}dversarial {A}ttacks against {F}acial {I}mage {M}anipulations}, 
-    author={Shivangi Aneja and Lev Markhasin and Matthias Nie{\ss}ner},
-    booktitle={ArXiv preprint arXiv:2112.09151},
-    year={2021}
-}
-					
+                                        <pre><code>
+@InProceedings{aneja2022tafim,
+               author="Aneja, Shivangi and Markhasin, Lev and Nie{\ss}ner, Matthias",
+               title="TAFIM: Targeted Adversarial Attacks Against Facial Image Manipulations",
+               booktitle="Computer Vision -- ECCV 2022",
+               year="2022",
+               publisher="Springer Nature Switzerland",
+               address="Cham",
+               pages="58--75",
+               isbn="978-3-031-19781-9"}
+
 										</code></pre>
                                     </div>
-                                    
+
                                 </div>
                             </div>
 
                 </div>
                 <!-- /.container-fluid -->
 
+
+                                    </div>
+                                </div>
+                </div>
             </div>
             <!-- End of Main Content -->
 
