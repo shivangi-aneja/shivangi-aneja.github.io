@@ -1,0 +1,359 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>FaceTalk: Audio-Driven Motion Diffusion for Neural Parametric Head Models</title>
+
+    <!-- Custom fonts for this template-->
+    <link href="../../vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
+    <link
+        href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i"
+        rel="stylesheet">
+     <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
+
+    <!-- Custom styles for this template-->
+    <!-- <link href="css/sb-admin-2.min.css" rel="stylesheet"> -->
+    <link href="../../css/styles.css" rel="stylesheet">
+
+</head>
+
+
+<body id="page-top">
+
+    <!-- Page Wrapper -->
+    <div id="wrapper">
+
+        
+        <!-- Content Wrapper -->
+        <div id="content-wrapper" class="d-flex flex-column">
+
+            <!-- Main Content -->
+            <div id="content">
+
+          
+
+                <!-- Begin Page Content -->
+                <div class="container-fluid">
+
+                    <!-- Page Heading -->
+                    <div class=" align-items-center justify-content-between mt-5 mb-4 text-center">
+                        <h1 class="h1 mb-0 text-gray-800 text-center">FaceTalk: Audio-Driven Motion Diffusion for Neural Parametric Head Models </h1>
+                    </div>
+
+                    <div class=" align-items-center justify-content-between text-center">
+                        <!-- Content Row -->
+                    	<div class="row">
+                        <div class="col-xl-2 col-md-2 mb-4 align-items-center">
+                        </div>
+                        <div class="col-xl-2 col-md-2 mb-4 align-items-center">
+                        	<h3> <a href="https://niessnerlab.org/members/shivangi_aneja/profile.html">Shivangi Aneja</a><sup>1</sup></h3>
+                        </div>
+                        <!-- <div class="col-xl-1 col-md-1 mb-4 align-items-center">	
+                        </div> -->
+                        <div class="col-xl-2 col-md-2 mb-4 align-items-center">
+                        	<h3> <a href="https://is.mpg.de/~jthies">Justus Thies</a><sup>2,3</sup></h3>
+                        </div>
+                        <!-- <div class="col-xl-1 col-md-1 mb-4 align-items-center">	
+                        </div> -->
+                        <div class="col-xl-2 col-md-2 mb-4 align-items-center">
+                            <h3> <a href="https://www.professoren.tum.de/en/dai-angela">Angela Dai</a><sup>1</sup></h3>
+                        </div>
+                        <div class="col-xl-2 col-md-2 mb-4 align-items-center">
+                        	<h3> <a href="https://niessnerlab.org/members/matthias_niessner/profile.html">Matthias Nießner</a><sup>1</sup></h3>
+                        </div>
+                    	</div>
+                    </div>
+                    <div class=" align-items-center justify-content-between text-center">
+                        <!-- Content Row -->
+                    	<div class="row">
+                            <div class="col-xl-3 col-md-3 mb-4 align-items-center">  </div>
+                        <div class="col-xl-2 col-md-2 mb-4 align-items-center">	
+                            <h5></a><sup>1</sup>Technical University of Munich</h5>
+                        </div>
+                        <div class="col-xl-2 col-md-2 mb-4 align-items-center">
+                        	<h5></a><sup>2</sup>Max Planck Institute for Intelligent Systems</h5>
+                        </div>
+                        
+                        <div class="col-xl-2 col-md-2 mb-4 align-items-center">
+                        	<h5></a><sup>3</sup>Technical University of Darmstadt</h5>
+                        </div>
+                        <div class="col-xl-4 col-md-4 mb-4 align-items-center">	
+                        </div>
+                        
+                    	</div>
+                    </div>
+
+                     <div class=" align-items-center justify-content-between text-center">
+                        <!-- Content Row -->
+                    	<div class="row">
+                        <div class="col-xl-12 col-md-12 align-items-center">
+                            	<div class="card-body">
+                            		<div class="no-gutters align-items-center ">
+                            		    <div>
+                            			<a class="btn btn-primary lift btn-lg ml-3 mr-3 rounded-pill" href="https://arxiv.org/abs/2212.01406" target="_blank">
+										    <i class="ai ai-arxiv ai-1x mr-3"></i>ArXiv
+										</a>
+                            			<a class="btn btn-primary lift btn-lg ml-3 mr-3 rounded-pill" href="https://youtu.be/toGOQqFuNmA" target="_blank">
+										    <i class="fab fa-youtube fa-1x mr-3"></i> Video
+										</a>
+                            			
+                            			<a class="btn btn-primary lift btn-lg ml-3 mr-3 rounded-pill" href="https://github.com/shivangi-aneja/FaceTalk" target="_blank">
+										    <i class="fab fa-github fa-1x mr-3"></i> GitHub
+										</a>
+
+                                        <a class="btn btn-primary lift btn-lg ml-3 mr-3 rounded-pill" href="" target="_blank">
+                                            <i class="fas fa-database fa-1x mr-3"></i>Dataset
+                                        </a>
+
+                                        <a class="btn btn-primary lift btn-lg ml-3 mr-3 rounded-pill" href="" target="_blank">
+										    <i class="fas fa-file-pdf fa-1x mr-3"></i> Paper
+										</a>
+                            		</div>
+                            		</div>
+                            	</div>
+                        </div>
+                </div>
+
+                         <div class="row">
+                             <div class="col-xl-2 col-lg-2">
+                            </div>
+                            <div class="col-xl-8 col-lg-8">
+                                <!-- Concept Figure -->
+                            <div>
+                                <div>
+                                    <h2 class="m-0 font-weight-bold text-dark mt-5">FaceTalk: Method Overview</h2>
+                                </div>
+                                <div class="card-body">
+                                    <div class="text-center">
+                                        
+                                        <video controls="controls" width="100%"  name="Teaser">
+                                                    <source src="videos/teaser_video.mov">
+                                        </video>
+                                    </div>
+                                    <p>Given input speech signal, we propose a diffusion-based approach to synthesize high-quality and temporally consistent 3D motion sequences of high-fidelity human heads as neural parametric head models. Our method can generate a diverse set of expressions (including wrinkles and eye blinks) and the generated mouth motion is temporally synchronized with the given audio signal.</p>
+                                </div>
+                            </div>
+
+
+                    <!-- Abstract -->
+                            <div>
+                                <div>
+                                    <h2 class="m-0 font-weight-bold text-dark mt-4">ABSTRACT</h2>
+                                </div>
+                                <div class="card-body">
+
+                                    <p class="text-left">We introduce FaceTalk, a novel generative approach designed for synthesizing high-fidelity 3D motion sequences of talking human heads from input audio signal. To capture the expressive, detailed nature of human heads, including hair, ears, and finer-scale eye movements, we propose to couple speech signal with the latent space of neural parametric head models to create high-fidelity, temporally coherent motion sequences. We propose a new latent diffusion model for this task, operating in the expression space of neural parametric head models, to synthesize audio-driven realistic head sequences. In the absence of a dataset with corresponding NPHM expressions to audio, we optimize for these correspondences to produce a dataset of temporally-optimized NPHM expressions fit to audio-video recordings of people talking. To the best of our knowledge, this is the first work to propose a generative approach for realistic and high-quality motion synthesis of volumetric human heads, representing a significant advancement in the field of audio-driven 3D animation. Notably, our approach stands out in its ability to generate plausible motion sequences that can produce high-fidelity head animation coupled with the NPHM shape space. Our experimental results substantiate the effectiveness of FaceTalk, consistently achieving superior and visually natural motion, encompassing diverse facial expressions and styles, outperforming existing methods by 75% in perceptual user study evaluation.</p>
+                                </div>
+                            </div>
+
+
+                             <div>
+                                <div>
+                                    <h2 class="m-0 font-weight-bold text-dark mt-4">VIDEO</h2>
+                                </div>
+                                <div class="card-body">                                   
+                                    <div class="embed-responsive embed-responsive-16by9">
+									  <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/toGOQqFuNmA" allowfullscreen></iframe>
+								</div>
+                                </div>
+                            </div>
+
+
+
+                    <!-- Results -->
+                    <div>
+                        <div>
+                            <h2 class="m-0 font-weight-bold text-dark mt-4">RESULTS</h2>
+                        </div>
+
+                        <div class="card-body">
+
+                            <div class="row">
+
+                                <div class="col-xl-12 col-md-12 mb-12 align-items-center">
+                                    <h3 class="m-0 font-weight-bold text-dark mt-3 mb-1">Baseline Comparisons</h3>
+                                    <div class="row">
+                                        <div class="col-md-6 mb-12 align-items-center">                                    
+                                            <video controls="controls" width="100%" name="Teaser">
+                                                <source src="videos/teaser_video.mov">
+                                            </video>
+                                        </div>
+                                        <div class="col-md-6 mb-12 align-items-center">  
+                                            <video controls="controls" width="100%" name="Teaser">
+                                                <source src="videos/teaser_video.mov">
+                                            </video>                                  
+                                        </div>
+
+                                    </div>
+                                </div>
+
+
+                                <div class="col-xl-12 col-md-12 mb-12 align-items-center">
+                                    <h3 class="m-0 font-weight-bold text-dark mt-3 mb-1">In-the-Wild Sequence Generation</h3>
+                                    <div class="row">
+                                        <div class="col-md-6 mb-12 align-items-center">                                    
+                                            <video controls="controls" width="100%" name="Teaser">
+                                                <source src="videos/teaser_video.mov">
+                                            </video>
+                                        </div>
+                                        <div class="col-md-6 mb-12 align-items-center">  
+                                            <video controls="controls" width="100%" name="Teaser">
+                                                <source src="videos/teaser_video.mov">
+                                            </video>                                  
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="col-xl-12 col-md-12 mb-12 align-items-center">
+                                    <h3 class="m-0 font-weight-bold text-dark mt-3 mb-1">Foreign Languages</h3>
+                                    <div class="row">
+
+                                        <div class="col-md-6 mb-12 align-items-center">                                    
+                                            <video controls="controls" width="100%" name="Teaser">
+                                                <source src="videos/teaser_video.mov">
+                                            </video>
+                                        </div>
+
+                                        <div class="col-md-6 mb-12 align-items-center">  
+                                            <video controls="controls" width="100%" name="Teaser">
+                                                <source src="videos/teaser_video.mov">
+                                            </video>                                  
+                                        </div>
+
+                                    </div>
+                                </div>
+
+                                <div class="col-xl-12 col-md-12 mb-12 align-items-center">
+                                    <h3 class="m-0 font-weight-bold text-dark mt-3 mb-1">Songs</h3>
+                                    <div class="row">
+
+                                        <div class="col-md-6 mb-12 align-items-center">                                    
+                                            <video controls="controls" width="100%" name="Teaser">
+                                                <source src="videos/teaser_video.mov">
+                                            </video>
+                                        </div>
+
+                                        <div class="col-md-6 mb-12 align-items-center">  
+                                            <video controls="controls" width="100%" name="Teaser">
+                                                <source src="videos/teaser_video.mov">
+                                            </video>                                  
+                                        </div>
+
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        </div>
+
+
+                     <div class="mt-4"></div>
+
+
+                    <div>
+                                <div>
+                                    <h2 class="m-0 font-weight-bold text-primary">BibTeX</h2>
+                                </div>
+                                <div>
+                                    <!-- <div class="text-left">
+                                    	<p>If you find this work useful for your research, please consider citing:</p>
+                                        <pre><code>@inproceedings{aneja2023facetalk,
+    title={{F}ace{T}alk: {T}ext-guided {E}diting of {T}extured 3{D} {M}orphable {M}odels},
+    author={Aneja, Shivangi and Thies, Justus and Dai, Angela and Nießner, Matthias},
+    booktitle={ArXiv preprint arXiv:2212.01406},
+    year={2022}
+}
+										</code></pre>
+
+
+                                </div> -->
+                            </div>
+
+                </div>
+                <!-- /.container-fluid -->
+
+            </div>
+
+                            </div>
+                         </div>
+
+
+            <!-- End of Main Content -->
+
+            <!-- Footer -->
+           <!--  <footer class="sticky-footer bg-white">
+                <div class="container my-auto">
+                    <div class="copyright text-center my-auto">
+                        <span>Copyright &copy; Your Website 2020</span>
+                    </div>
+                </div>
+            </footer> -->
+            <footer class="footer mt-auto footer-light">
+                <div class="container-fluid">
+                    <div class="copyright text-center my-auto">
+                        <span>Copyright &copy; Shivangi Aneja 2023</span><br>
+                        <span>Made with <span class="text-primary"><a href="https://startbootstrap.com/theme/sb-admin-2" >Bootstrap</a></span></span>
+                    </div>
+                </div>
+                <a class="btn btn-primary lift btn-lg scroll-to-top rounded ml-3 mr-3 lift" href="#page-top">
+			        <i class="fas fa-angle-up"></i>
+			    </a>
+            </footer>
+            <!-- End of Footer -->
+
+        </div>
+                <!-- End of Content Wrapper -->
+
+        </div>
+        <!-- End of Page Wrapper -->
+
+    <!-- Scroll to Top Button-->
+<div hidden>
+    <div class="row">
+<div class="col-md-6 mt-4">
+  
+    <div class="icon-box" style="text-align: right;">
+    <i class="ri-eye-line" style="color: #ffa76e;"></i>
+        <!-- hitwebcounter Code START -->
+    <a href="https://www.hitwebcounter.com" target="_blank">
+    <img src="https://hitwebcounter.com/counter/counter.php?page=7806575&style=0009&nbdigits=5&type=page&initCount=0" title="Free Counter" Alt="web counter"   border="0" />      
+    </a>
+   </div>
+  
+</div>
+
+</div>
+<div class="row "></div>
+<div class="icon-box" style="text-align: right;">
+  <!-- hitwebcounter Code START -->
+  <a href="https://www.hitwebcounter.com" target="_blank">
+	<img src="https://hitwebcounter.com/counter/counter.php?page=7806576&style=0009&nbdigits=5&type=ip&initCount=0" title="Free Counter" Alt="web counter"   border="0" />
+  </a>      
+</div>
+
+
+</div>
+</div>
+    
+
+
+
+    <!-- Bootstrap core JavaScript-->
+    <script src="../../vendor/jquery/jquery.min.js"></script>
+    <script src="../../vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+
+    <!-- Core plugin JavaScript-->
+    <script src="../../vendor/jquery-easing/jquery.easing.min.js"></script>
+
+    <!-- Custom scripts for all pages-->
+    <script src="../../js/sb-admin-2.min.js"></script>
+
+</body>
+
+</html>
