@@ -25,6 +25,7 @@
 </head>
 
 
+
 <body id="page-top">
 
     <!-- Page Wrapper -->
@@ -44,7 +45,7 @@
 
                     <!-- Page Heading -->
                     <div class=" align-items-center justify-content-between mt-5 mb-4 text-center">
-                        <h1 class="h1 mb-0 text-gray-800 text-center">FaceTalk: Audio-Driven Motion Diffusion for Neural Parametric Head Models </h1>
+                        <h1 class="h1 display-4 font-weight-bold mb-0 text-gray-800 text-center">FaceTalk: Audio-Driven Motion Diffusion <br> for Neural Parametric Head Models </h1>
                     </div>
 
                     <div class=" align-items-center justify-content-between text-center">
@@ -93,7 +94,7 @@
                      <div class=" align-items-center justify-content-between text-center">
                         <!-- Content Row -->
                     	<div class="row">
-                        <div class="col-xl-12 col-md-12 align-items-center">
+                        <div class="col-xl-12 col-md-12 align-items-center mb-5">
                             	<div class="card-body">
                             		<div class="no-gutters align-items-center ">
                             		    <div>
@@ -126,11 +127,12 @@
                             </div>
                             <div class="col-xl-8 col-lg-8">
                                 <!-- Concept Figure -->
-                            <div>
+                            <div class="rounded border border-primary">
                                 <div>
-                                    <h2 class="m-0 font-weight-bold text-dark mt-5">FaceTalk: Method Overview</h2>
+                                    <h2 class="m-0 font-weight-bold text-dark mt-1">Listen With Audio <i class="fa fa-volume-up"></i></h2>
                                 </div>
                                 <div class="card-body">
+
                                     <div class="text-center">
                                         
                                         <video controls="controls" width="100%"  name="Teaser">
@@ -139,7 +141,7 @@
                                     </div>
                                     <p>Given input speech signal, we propose a diffusion-based approach to synthesize high-quality and temporally consistent 3D motion sequences of high-fidelity human heads as neural parametric head models. Our method can generate a diverse set of expressions (including wrinkles and eye blinks) and the generated mouth motion is temporally synchronized with the given audio signal.</p>
                                 </div>
-                            </div>
+                            </div><br><br>
 
 
                     <!-- Abstract -->
@@ -160,7 +162,7 @@
                                 </div>
                                 <div class="card-body">                                   
                                     <div class="embed-responsive embed-responsive-16by9">
-									  <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/toGOQqFuNmA" allowfullscreen></iframe>
+									  <iframe class="embed-responsive-item" width="70%" src="https://www.youtube.com/embed/toGOQqFuNmA" allowfullscreen></iframe>
 								</div>
                                 </div>
                             </div>
@@ -171,23 +173,25 @@
                     <div>
                         <div>
                             <h2 class="m-0 font-weight-bold text-dark mt-4">RESULTS</h2>
+                            <h4>Sound On <i class="fa fa-volume-up"></i></h4>
                         </div>
 
                         <div class="card-body">
 
                             <div class="row">
 
+                                <div class="rounded border border-primary">
                                 <div class="col-xl-12 col-md-12 mb-12 align-items-center mb-4">
                                     <h3 class="m-0 font-weight-bold text-dark mt-3 mb-1">Baseline Comparisons</h3>
                                     <div class="row">
                                         <div class="col-md-6 mb-12 align-items-center">                                    
                                             <video controls="controls" width="100%">
-                                                <source src="videos/baselines/baseline_1.mov">
+                                                <source src="videos/baselines/baseline_1.m4v">
                                             </video>
                                         </div>
                                         <div class="col-md-6 mb-12 align-items-center">  
                                             <video controls="controls" width="100%">
-                                                <source src="videos/baselines/baseline_2.mov">
+                                                <source src="videos/baselines/baseline_2.m4v">
                                             </video>                                  
                                         </div>
 
@@ -196,12 +200,12 @@
                                     <div class="row">
                                         <div class="col-md-6 mb-12 align-items-center">                                    
                                             <video controls="controls" width="100%">
-                                                <source src="videos/baselines/baseline_3.mov">
+                                                <source src="videos/baselines/baseline_3.m4v">
                                             </video>
                                         </div>
                                         <div class="col-md-6 mb-12 align-items-center">  
                                             <video controls="controls" width="100%">
-                                                <source src="videos/baselines/baseline_4.mov">
+                                                <source src="videos/baselines/baseline_4.m4v">
                                             </video>                                  
                                         </div>
 
@@ -210,19 +214,21 @@
                                     <div class="row">
                                         <div class="col-md-6 mb-12 align-items-center">                                    
                                             <video controls="controls" width="100%">
-                                                <source src="videos/baselines/baseline_5.mov">
+                                                <source src="videos/baselines/baseline_5.m4v">
                                             </video>
                                         </div>
                                         <div class="col-md-6 mb-12 align-items-center">  
                                             <video controls="controls" width="100%">
-                                                <source src="videos/baselines/baseline_6.mov">
+                                                <source src="videos/baselines/baseline_6.m4v">
                                             </video>                                  
                                         </div>
 
                                     </div>
                                 </div>
+                                </div>
+                                <br><br>
 
-
+                                <div class="rounded border border-primary">
                                 <div class="col-xl-12 col-md-12 mb-12 align-items-center mt-4 mb-4">
                                     <h3 class="m-0 font-weight-bold text-dark mt-3 mb-1">In-the-Wild Sequence Generation</h3>
                                     <div class="row">
@@ -267,7 +273,10 @@
 
                                     </div>
                                 </div>
+                                </div><br><br>
 
+
+                                <div class="rounded border border-primary">
                                 <div class="col-xl-12 col-md-12 mb-12 align-items-center mt-4 mb-4">
                                     <h3 class="m-0 font-weight-bold text-dark mt-3 mb-1">Foreign Languages</h3>
                                     <div class="row">
@@ -344,24 +353,56 @@
 
                                     </div>
                                 </div>
+                                </div><br><br>
 
+                                <div class="rounded border border-primary">
                                 <div class="col-xl-12 col-md-12 mb-12 align-items-center">
                                     <h3 class="m-0 font-weight-bold text-dark mt-3 mb-1">Songs</h3>
-                                    <div class="row">
 
+                                    <div class="row">
                                         <div class="col-md-6 mb-12 align-items-center">                                    
                                             <video controls="controls" width="100%" name="Teaser">
-                                                <source src="videos/teaser_video.mov">
+                                                <source src="videos/songs/all_of_me_3.mov">
                                             </video>
                                         </div>
 
                                         <div class="col-md-6 mb-12 align-items-center">  
                                             <video controls="controls" width="100%" name="Teaser">
-                                                <source src="videos/teaser_video.mov">
+                                                <source src="videos/songs/animals_3.mov">
                                             </video>                                  
                                         </div>
-
                                     </div>
+
+                                    <div class="row">
+                                        <div class="col-md-6 mb-12 align-items-center">                                    
+                                            <video controls="controls" width="100%" name="Teaser">
+                                                <source src="videos/songs/attention_3.mov">
+                                            </video>
+                                        </div>
+
+                                        <div class="col-md-6 mb-12 align-items-center">  
+                                            <video controls="controls" width="100%" name="Teaser">
+                                                <source src="videos/songs/chandelier_6.mov">
+                                            </video>                                  
+                                        </div>
+                                    </div>
+
+                                    <div class="row">
+                                        <div class="col-md-6 mb-12 align-items-center">                                    
+                                            <video controls="controls" width="100%" name="Teaser">
+                                                <source src="videos/songs/despacito_6.mov">
+                                            </video>
+                                        </div>
+
+                                        <div class="col-md-6 mb-12 align-items-center">  
+                                            <video controls="controls" width="100%" name="Teaser">
+                                                <source src="videos/songs/diamond_1.mov">
+                                            </video>                                  
+                                        </div>
+                                    </div>
+                                </div><br>
+
+
                                 </div>
                             </div>
                         </div>
