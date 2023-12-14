@@ -18251,6 +18251,45 @@ body {
 .card {
   box-shadow: 0 0.15rem 1.75rem 0 rgba(33, 40, 50, 0.15);
 }
+
+
+
+.card .card-header .dropdown {
+  line-height: 1;
+}
+
+.card .card-header .dropdown .dropdown-menu {
+  line-height: 1.5;
+}
+
+.card .card-header[data-toggle="collapse"] {
+  text-decoration: none;
+  position: relative;
+  padding: 0.75rem 3.25rem 0.75rem 1.25rem;
+}
+
+.card .card-header[data-toggle="collapse"]::after {
+  position: absolute;
+  right: 0;
+  top: 0;
+  padding-right: 1.725rem;
+  line-height: 51px;
+  font-weight: 900;
+  content: '\f107';
+  font-family: 'Font Awesome 5 Free';
+  color: #d1d3e2;
+}
+
+.card .card-header[data-toggle="collapse"].collapsed {
+  border-radius: 0.35rem;
+}
+
+.card .card-header[data-toggle="collapse"].collapsed::after {
+  content: '\f105';
+}
+
+
+
 .card .card-header {
   font-weight: 500;
 }
