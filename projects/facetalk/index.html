@@ -13,13 +13,10 @@
 
     <!-- Custom fonts for this template-->
     <link href="../../vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
-    <link
-        href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i"
-        rel="stylesheet">
-     <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
-     <script type="text/javascript" async
-            src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/MathJax.js?config=TeX-MML-AM_CHTML">
-    </script>
+    <link href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
+    <script type="text/javascript" async src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/MathJax.js?config=TeX-MML-AM_CHTML"></script>
+    <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
 
     <!-- Custom styles for this template-->
     <link href="../../css/styles.css" rel="stylesheet">
@@ -102,7 +99,7 @@
                             	<div class="card-body">
                             		<div class="no-gutters align-items-center">
                             		    <div>
-                            			<a class="btn btn-primary lift btn-lg ml-3 mr-3 rounded-pill disabled" href="" target="_blank">
+                            			<a class="btn btn-primary lift btn-lg ml-3 mr-3 rounded-pill" href="" target="_blank">
 										    <i class="ai ai-arxiv ai-1x mr-3"></i>ArXiv
 										</a>
                             			<a class="btn btn-primary lift btn-lg ml-3 mr-3 rounded-pill" href="https://youtu.be/7Jf0kawrA3Q" target="_blank">
@@ -128,9 +125,9 @@
 
 
                          <div class="row">
-                             <div class="col-xl-3 col-lg-2">
+                             <div class="col-xl-1 col-lg-1">
                             </div>
-                            <div class="col-xl-6 col-lg-8">
+                            <div class="col-xl-10 col-lg-10">
 
                                 <!-- Concept Figure -->
                                 <div class="card mb-4 py-3 border-bottom-primary">
@@ -141,7 +138,7 @@
 
                                     <div class="text-center">
 
-                                        <video class="embed-responsive-item" controls="controls" width="100%"  name="Teaser">
+                                        <video class="embed-responsive-item" controls="controls" style="width: 100%; max-width: 800px; height: auto;" name="Teaser">
                                                     <source src="videos/teaser_video.mov">
                                         </video>
                                     </div>
@@ -169,7 +166,7 @@
                                     <h2 class="h2 display-4 font-weight-bold mb-0 text-gray-800 text-center">Video</h2>
                                 </div>
                                 <div class="card-body d-flex justify-content-center align-items-center">
-                                    <div class="embed-responsive embed-responsive-16by9" style="width: 80%;">
+                                    <div class="embed-responsive embed-responsive-16by9" style="width: 100%; max-width: 800px; height: auto;">
 									  <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/7Jf0kawrA3Q" allowfullscreen></iframe>
 								</div>
                                 </div>
@@ -195,36 +192,36 @@
                                     <div class="card-body">
                                         <div class="row">
                                         <div class="col-md-6 mb-12 align-items-center">                                    
-                                            <video class="embed-responsive-item" controls="controls" width="100%">
+                                            <video class="embed-responsive-item my-video" controls="controls" width="100%">
                                                 <source src="videos/baselines/baseline_1.m4v">
                                             </video>
                                         </div>
                                         <div class="col-md-6 mb-12 align-items-center">  
-                                            <video class="embed-responsive-item" controls="controls" width="100%">
+                                            <video class="embed-responsive-item my-video" controls="controls" width="100%">
                                                 <source src="videos/baselines/baseline_2.m4v">
                                             </video>                                  
                                         </div>
 
                                         <div class="col-md-6 mb-12 align-items-center">  
-                                            <video class="embed-responsive-item" controls="controls" width="100%">
+                                            <video class="embed-responsive-item my-video" controls="controls" width="100%">
                                                 <source src="videos/baselines/baseline_3.m4v">
                                             </video>                                  
                                         </div>
 
                                         <div class="col-md-6 mb-12 align-items-center">  
-                                            <video class="embed-responsive-item" controls="controls" width="100%">
+                                            <video class="embed-responsive-item my-video" controls="controls" width="100%">
                                                 <source src="videos/baselines/baseline_4.m4v">
                                             </video>                                  
                                         </div>
 
                                         <div class="col-md-6 mb-12 align-items-center">  
-                                            <video class="embed-responsive-item" controls="controls" width="100%">
+                                            <video class="embed-responsive-item my-video" controls="controls" width="100%">
                                                 <source src="videos/baselines/baseline_5.m4v">
                                             </video>                                  
                                         </div>
 
                                         <div class="col-md-6 mb-12 align-items-center">  
-                                            <video class="embed-responsive-item" controls="controls" width="100%">
+                                            <video class="embed-responsive-item my-video" controls="controls" width="100%">
                                                 <source src="videos/baselines/baseline_6.m4v">
                                             </video>                                  
                                         </div>
@@ -548,14 +545,12 @@
             <!-- End of Footer -->
 
         </div>
-                <!-- End of Content Wrapper -->
+        <!-- End of Content Wrapper -->
 
         </div>
         <!-- End of Page Wrapper -->
     <!-- Scroll to Top Button-->
 </div>
-
-
 
 
     <!-- Bootstrap core JavaScript-->
