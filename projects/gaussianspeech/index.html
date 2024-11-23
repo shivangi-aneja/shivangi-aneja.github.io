@@ -1,0 +1,613 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>GaussianSpeech: Audio-Driven Gaussian Avatars</title>
+
+    <!-- Custom fonts for this template-->
+    <link href="../../vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
+    <link href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
+    <script type="text/javascript" async src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/MathJax.js?config=TeX-MML-AM_CHTML"></script>
+    <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+
+    <!-- Custom styles for this template-->
+    <link href="../../css/styles.css" rel="stylesheet">
+    <!-- <link href="../../css/sb-admin-2.css" rel="stylesheet"> -->
+
+
+</head>
+
+
+
+<body id="page-top">
+
+    <!-- Page Wrapper -->
+    <div id="wrapper">
+
+
+        <!-- Content Wrapper -->
+        <div id="content-wrapper" class="d-flex flex-column">
+
+            <!-- Main Content -->
+            <div id="content">
+
+
+
+                <!-- Begin Page Content -->
+                <div class="container-fluid">
+
+                    <!-- Page Heading -->
+                    <div class=" align-items-center justify-content-between mt-5 mb-4 text-center">
+                        <h1 class="h1 display-4 font-weight-bold mb-0 text-gray-800 text-center">GaussianSpeech: Audio-Driven Gaussian Avatars </h1>
+                    </div>
+
+                    <div class=" align-items-center justify-content-between text-center">
+                        <!-- Content Row -->
+                    	<div class="row">
+                        <div class="col-xl-3 col-md-2 mb-4 align-items-center">
+                        </div>
+                        <div class="col-xl-1 col-md-2 mb-4 align-items-center">
+                        	<h1> <a href="https://niessnerlab.org/members/shivangi_aneja/profile.html">Shivangi Aneja</a><sup>1</sup></h1>
+                        </div>
+                        <!-- <div class="col-xl-1 col-md-1 mb-4 align-items-center">
+                        </div> -->
+                        <div class="col-xl-1 col-md-2 mb-4 align-items-center">
+                            <h1> <a href="https://niessnerlab.org/members/artem_sevastopolsky/profile.html">Artem Sevastopolsky</a><sup>1</sup></h1>
+                        </div>
+                        <div class="col-xl-1 col-md-2 mb-4 align-items-center">
+                            <h1> <a href="https://niessnerlab.org/members/tobias_kirschstein/profile.html">Tobias Kirschstein</a><sup>1</sup></h1>
+                        </div>
+                        <div class="col-xl-1 col-md-2 mb-4 align-items-center">
+                        	<h1> <a href="https://is.mpg.de/~jthies">Justus Thies</a><sup>2,3</sup></h1>
+                        </div>
+                        <!-- <div class="col-xl-1 col-md-1 mb-4 align-items-center">
+                        </div> -->
+                        <div class="col-xl-1 col-md-2 mb-4 align-items-center">
+                            <h1> <a href="https://www.professoren.tum.de/en/dai-angela">Angela Dai</a><sup>1</sup></h1>
+                        </div>
+                        <div class="col-xl-1 col-md-2 mb-4 align-items-center">
+                        	<h1> <a href="https://niessnerlab.org/members/matthias_niessner/profile.html">Matthias Nießner</a><sup>1</sup></h1>
+                        </div>
+                    	</div>
+                    </div>
+                    <div class=" align-items-center justify-content-between text-center">
+                        <!-- Content Row -->
+                    	<div class="row">
+                            <div class="col-xl-3 col-md-3 mb-4 align-items-center">  </div>
+                        <div class="col-xl-2 col-md-2 mb-4 align-items-center">
+                            <h3></a><sup>1</sup>Technical University of Munich</h3>
+                        </div>
+                        <div class="col-xl-2 col-md-2 mb-4 align-items-center">
+                        	<h3></a><sup>2</sup>Max Planck Institute for Intelligent Systems</h3>
+                        </div>
+
+                        <div class="col-xl-2 col-md-2 mb-4 align-items-center">
+                        	<h3></a><sup>3</sup>Technical University of Darmstadt</h3>
+                        </div>
+                        <div class="col-xl-4 col-md-4 mb-4 align-items-center">
+                        </div>
+
+                    	</div>
+                    </div>
+
+                     <div class=" align-items-center justify-content-between text-center">
+                        <!-- Content Row -->
+                    	<div class="row">
+                        <div class="col-xl-12 col-md-12 align-items-center mb-5">
+                            	<div class="card-body">
+                            		<div class="no-gutters align-items-center">
+                            		    <div>
+                            			<a class="btn btn-primary lift btn-lg ml-3 mr-3 rounded-pill" href="" target="_blank">
+										    <i class="ai ai-arxiv ai-1x mr-3"></i>ArXiv
+										</a>
+                            			<a class="btn btn-primary lift btn-lg ml-3 mr-3 rounded-pill" href="" target="_blank">
+										    <i class="fab fa-youtube fa-1x mr-3"></i> Video
+										</a>
+
+                            			<a class="btn btn-primary lift btn-lg ml-3 mr-3 rounded-pill" href="https://github.com/shivangi-aneja/GaussianSpeech" target="_blank">
+										    <i class="fab fa-github fa-1x mr-3"></i> GitHub
+										</a>
+
+                                        <a class="btn btn-primary lift btn-lg ml-3 mr-3 rounded-pill disabled" href="" target="_blank">
+                                            <i class="fas fa-database fa-1x mr-3"></i>Dataset
+                                        </a>
+
+                                        <a class="btn btn-primary lift btn-lg ml-3 mr-3 rounded-pill" href="https://drive.google.com/file/d/1BU916OL7FL-YYE-7giJtsXu4F3cP6sQ-" target="_blank">
+										    <i class="fas fa-file-pdf fa-1x mr-3"></i> Paper
+										</a>
+                            		</div>
+                            		</div>
+                            	</div>
+                        </div>
+                </div>
+
+
+                         <div class="row">
+                             <div class="col-xl-1 col-lg-1">
+                            </div>
+                            <div class="col-xl-10 col-lg-10">
+
+                                <!-- Concept Figure -->
+                                <div class="card mb-4 py-3 border-bottom-primary">
+                                <div>
+                                    <h2 class="m-0 font-weight-bold text-dark mt-1">Play With Audio <i class="fa fa-volume-up"></i></h2>
+                                </div>
+                                <div class="card-body">
+
+                                    <div class="text-center">
+
+                                        <video class="embed-responsive-item" controls="controls" style="width: 100%; max-width: 800px; height: auto;" name="Teaser">
+                                                    <source src="videos/teaser_video.mp4">
+                                        </video>
+                                    </div>
+                                    <p>Given input speech signal, GaussianSpeech can synthesize photorealistic 3D-consistent talking human head avatars. Our method can generate realistic and high-quality animations, including mouth interiors such as teeth, wrinkles, and specularities in the eyes. We show an example application by using ChatGPT to drive avatar's conversation.</p>
+                                </div>
+                            </div>
+                                
+                            <br><br>
+
+
+                    <!-- Abstract -->
+                            <div class="card mb-4 py-3 border-bottom-primary">
+                                <div>
+                                    <h2 class="h2 display-4 font-weight-bold mb-0 text-gray-800 text-center">Abstract </h2>
+                                </div>
+                                <div class="card-body">
+
+                                    <p class="text-left">We introduce GaussianSpeech, a novel approach that synthesizes high-fidelity animation sequences of photo-realistic, personalized 3D human head avatars from spoken audio. To capture the expressive, detailed nature of human heads, including skin furrowing and finer-scale facial movements, we propose to couple speech signal with 3D Gaussian splatting to create realistic, temporally coherent motion sequences. We propose a compact and efficient 3DGS-based avatar representation that generates expression-dependent color and leverages wrinkle- and perceptually-based losses to synthesize facial details, including wrinkles that occur with different expressions. To enable sequence modeling of 3D Gaussian splats with audio, we devise an audio-conditioned transformer model capable of extracting lip and expression features directly from audio input. Due to the absence of high-quality datasets of talking humans in correspondence with audio, we captured a new large-scale multi-view dataset of audio-visual sequences of talking humans with native English accents and diverse facial geometry. GaussianSpeech consistently achieves state-of-the-art performance with visually natural motion at real time rendering rates, while encompassing diverse facial expressions and styles.</p>
+                                </div>
+                            </div><br><br>
+
+
+                             <!-- <div class=" card mb-4 py-3 border-bottom-primary">
+                                <div>
+                                    <h2 class="h2 display-4 font-weight-bold mb-0 text-gray-800 text-center">Video</h2>
+                                </div>
+                                <div class="card-body d-flex justify-content-center align-items-center">
+                                    <div class="embed-responsive embed-responsive-16by9" style="width: 100%; max-width: 800px; height: auto;">
+									  <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/7Jf0kawrA3Q" allowfullscreen></iframe>
+								</div>
+                                </div>
+                            </div><br><br><br><br> -->
+
+                    <!-- Results -->
+                    <div>
+                        <div>
+                            <h2 class="h3 display-4 font-weight-bold mb-0 text-gray-800 text-center">Results</h2>
+                            <h1 class="">Sound On <i class="fa fa-volume-up"></i></h1>
+                        </div>
+
+                        <div class="card shadow mb-4">
+                                <!-- Card Header - Accordion -->
+                                <a href="#collapseCardExample1" class="d-block card-header py-3" data-toggle="collapse" role="button" aria-expanded="true" aria-controls="collapseCardExample">
+                                    <h2 class="m-0 font-weight-bold text-primary">(A) Baseline Comparisons</h2>
+                                </a>
+                                <!-- Card Content - Collapse -->
+                                <div class="collapse show" id="collapseCardExample1" style="">
+                                    <div class="card-body">
+                                        <div class="row">
+                                        <div class="col-md-6 mb-12 align-items-center">                                    
+                                            <video class="embed-responsive-item my-video" controls="controls" width="100%">
+                                                <source src="videos/baselines/flame_baseline_1.mp4">
+                                            </video>
+                                        </div>
+                                        <div class="col-md-6 mb-12 align-items-center">  
+                                            <video class="embed-responsive-item my-video" controls="controls" width="100%">
+                                                <source src="videos/baselines/flame_baseline_2.mp4">
+                                            </video>                                  
+                                        </div>
+
+                                        
+
+                                        <div class="col-md-6 mb-12 align-items-center">  
+                                            <video class="embed-responsive-item my-video" controls="controls" width="100%">
+                                                <source src="videos/baselines/nerf_baselines_1.mp4">
+                                            </video>                                  
+                                        </div>
+
+                                        <div class="col-md-6 mb-12 align-items-center">  
+                                            <video class="embed-responsive-item my-video" controls="controls" width="100%">
+                                                <source src="videos/baselines/3dgs_baselines_1.mp4">
+                                            </video>                                  
+                                        </div>
+                                    </div>
+                                    </div>
+                                </div>
+                        </div>
+
+                        <div class="card shadow mb-4">
+                            <!-- Card Header - Accordion -->
+                            <a href="#collapseCardExample2" class="d-block card-header py-3" data-toggle="collapse" role="button" aria-expanded="true" aria-controls="collapseCardExample">
+                                <h2 class="m-0 font-weight-bold text-primary">(B) In-the-Wild Sequence Generation</h2>
+                            </a>
+                            <!-- Card Content - Collapse -->
+                            <div class="collapse show" id="collapseCardExample2" style="">
+                                <div class="card-body">
+                                    <div class="row">
+                                    <div class="col-md-6 mb-12 align-items-center">                                    
+                                        <video class="embed-responsive-item" controls="controls" width="100%">
+                                            <source src="videos/in_the_wild/wild1.mp4">
+                                        </video>
+                                    </div>
+                                    <div class="col-md-6 mb-12 align-items-center">  
+                                        <video class="embed-responsive-item" controls="controls" width="100%">
+                                            <source src="videos/in_the_wild/wild2.mp4">
+                                        </video>                                  
+                                    </div>
+
+                                    
+
+                                </div>
+                                </div>
+                            </div>
+                        </div>
+
+
+                        <div class="card shadow mb-4">
+                            <!-- Card Header - Accordion -->
+                            <a href="#collapseCardExample3" class="d-block card-header py-3" data-toggle="collapse" role="button" aria-expanded="true" aria-controls="collapseCardExample">
+                                <h2 class="m-0 font-weight-bold text-primary">(C) Foreign Languages</h2>
+                            </a>
+                            <!-- Card Content - Collapse -->
+                            <div class="collapse show" id="collapseCardExample3" style="">
+                                <div class="card-body">
+                                    <div class="row">
+                                    
+                                    
+                                    <div class="col-md-6 mb-12 align-items-center">                                    
+                                        <video class="embed-responsive-item" controls="controls" width="100%">
+                                            <source src="videos/languages/german.mp4">
+                                        </video>
+                                    </div>
+                                    <div class="col-md-6 mb-12 align-items-center">  
+                                        <video class="embed-responsive-item" controls="controls" width="100%">
+                                            <source src="videos/languages/french.mp4">
+                                        </video>                                  
+                                    </div>
+                                </div>
+
+                                <div class="row">
+                                   
+                                    <div class="col-md-6 mb-12 align-items-center">                                    
+                                        <video class="embed-responsive-item" controls="controls" width="100%">
+                                            <source src="videos/languages/italian.mp4">
+                                        </video>
+                                    </div>
+                                    <div class="col-md-6 mb-12 align-items-center">  
+                                        <video class="embed-responsive-item" controls="controls" width="100%">
+                                            <source src="videos/languages/spanish.mp4">
+                                        </video>                                  
+                                    </div>
+
+                                </div>
+
+                                <div class="row">
+                                   
+                                    <div class="col-md-6 mb-12 align-items-center">                                    
+                                        <video class="embed-responsive-item" controls="controls" width="100%">
+                                            <source src="videos/languages/hindi.mp4">
+                                        </video>
+                                    </div>
+                                    <div class="col-md-6 mb-12 align-items-center">  
+                                        <video class="embed-responsive-item" controls="controls" width="100%">
+                                            <source src="videos/languages/chinese.mp4">
+                                        </video>                                  
+                                    </div>
+                                </div>
+                                
+                                </div>
+                            </div>
+                        </div>
+
+
+                        <div class="card shadow mb-4">
+                            <!-- Card Header - Accordion -->
+                            <a href="#collapseCardExample4" class="d-block card-header py-3" data-toggle="collapse" role="button" aria-expanded="true" aria-controls="collapseCardExample">
+                                <h2 class="m-0 font-weight-bold text-primary">(D) Songs</h2>
+                            </a>
+                            <!-- Card Content - Collapse -->
+                            <div class="collapse show" id="collapseCardExample4" style="">
+                                <div class="card-body">
+                                    <div class="row">
+                                    <div class="col-md-6 mb-12 align-items-center">                                    
+                                        <video class="embed-responsive-item" controls="controls" width="100%">
+                                            <source src="videos/songs/song1.mp4">
+                                        </video>
+                                    </div>
+                                    <div class="col-md-6 mb-12 align-items-center">  
+                                        <video class="embed-responsive-item" controls="controls" width="100%">
+                                            <source src="videos/songs/song2.mp4">
+                                        </video>                                  
+                                    </div>
+                                </div>
+                                </div>
+                            </div>
+                        </div>
+
+
+                        <div class="card shadow mb-4">
+                            <!-- Card Header - Accordion -->
+                            <a href="#collapseCardExample5" class="d-block card-header py-3" data-toggle="collapse" role="button" aria-expanded="true" aria-controls="collapseCardExample">
+                                <h2 class="m-0 font-weight-bold text-primary">(E) Ablation Study</h2>
+                            </a>
+                            <!-- Card Content - Collapse -->
+                            <div class="collapse show" id="collapseCardExample5" style="">
+                                <div class="card-body">
+                                    <div class="row">
+                                    <div class="col-md-6 mb-12 align-items-center">                                    
+                                        <video class="embed-responsive-item" controls="controls" width="100%">
+                                            <source src=videos/ablation/ablation_study.mp4>
+                                        </video>
+                                    </div>
+                                    <div class="col-md-6 mb-12 align-items-center">  
+                                        <video class="embed-responsive-item" controls="controls" width="100%">
+                                            <source src="videos/ablation/ablation_avatar_init.mp4">
+                                        </video>                                  
+                                    </div>
+
+                                    
+
+                                </div>
+                                </div>
+                            </div>
+                        </div><br><br>
+                    </div>
+
+
+                    <div class="card mb-4 py-3 border-bottom-primary">
+                    <div>
+                        <h2 class="h2 font-weight-bold mb-0 text-gray-800 text-center">Method Overview</h2>
+                    </div>
+                    <div class="card-body">
+
+                        <img src="./images/method_figure.png" alt="Method Figure" class="img-fluid">
+                        <br><br>
+
+
+                        <p class="text-left">From the given speech signal, GaussianSpeech uses Wav2Vec 2.0 encoder to extract generic audio features and maps them to personalized lip feature embeddings \(\boldsymbol{c}^{1:T}\) with Lip Transformer Encoder and wrinkle features \(\boldsymbol{w}^{1:T}\) with Wrinkle Transformer Encoder. Next, the Expression Encoder synthesizes FLAME expressions \(\boldsymbol{e}^{1:T}\) which are then projected via Expression2Latent MLP and concatenated with \(\boldsymbol{c}^{1:T}\) for input to the motion decoder. The motion decoder employs a multi-head transformer decoder consisting of Multihead Self-Attention, Cross-Attention, and Feed Forward layers. The concatenated lip-expression features are fused into the decoder via cross-attention layers with alignment mask \(\mathcal{M}\). The decoder then predicts FLAME vertex offsets \(\{ \boldsymbol{V}_\textrm{offset} \}^{1:T}\) which gets added to the template mesh \(\boldsymbol{T}\) to generate vertex animation in canonical space. During training, these are then fed to our optimized 3DGS avatar and the color MLP \(\boldsymbol{\theta}_\textrm{color}\) and gaussian latents \(\boldsymbol{z}\) are further refined via re-rendering losses.
+                    </p>
+                    </div>
+                    </div><br><br>
+
+
+                    <!-- Dataset -->
+                    <div>
+                        <div>
+                            <h2 class="h3 display-4 font-weight-bold mb-0 text-gray-800 text-center">Dataset</h2>
+                            <h1 class="">Sound On <i class="fa fa-volume-up"></i></h1>
+                        </div>
+
+                        <div class="card shadow mb-4">
+                                <!-- Card Header - Accordion -->
+                                <a href="#collapseCardExample1" class="d-block card-header py-3" data-toggle="collapse" role="button" aria-expanded="true" aria-controls="collapseCardExample">
+                                    <h2 class="m-0 font-weight-bold text-primary">Avatar 1</h2>
+                                </a>
+                                <!-- Card Content - Collapse -->
+                                <div class="collapse show" id="collapseCardExample1" style="">
+                                    <div class="card-body">
+                                        <div class="row">
+                                        <div class="col-md-6 mb-12 align-items-center">                                    
+                                            <video class="embed-responsive-item my-video" controls="controls" width="100%">
+                                                <source src="videos/dataset/avatar1_1.mp4">
+                                            </video>
+                                        </div>
+                                        <div class="col-md-6 mb-12 align-items-center">  
+                                            <video class="embed-responsive-item my-video" controls="controls" width="100%">
+                                                <source src="videos/dataset/avatar1_2.mp4">
+                                            </video>                                  
+                                        </div>
+                                    </div>
+                                    </div>
+                                </div>
+                        </div>
+
+
+                        <div class="card shadow mb-4">
+                                <!-- Card Header - Accordion -->
+                                <a href="#collapseCardExample1" class="d-block card-header py-3" data-toggle="collapse" role="button" aria-expanded="true" aria-controls="collapseCardExample">
+                                    <h2 class="m-0 font-weight-bold text-primary">Avatar 2</h2>
+                                </a>
+                                <!-- Card Content - Collapse -->
+                                <div class="collapse show" id="collapseCardExample1" style="">
+                                    <div class="card-body">
+                                        <div class="row">
+                                        <div class="col-md-6 mb-12 align-items-center">                                    
+                                            <video class="embed-responsive-item my-video" controls="controls" width="100%">
+                                                <source src="videos/dataset/avatar2_1.mp4">
+                                            </video>
+                                        </div>
+                                        <div class="col-md-6 mb-12 align-items-center">  
+                                            <video class="embed-responsive-item my-video" controls="controls" width="100%">
+                                                <source src="videos/dataset/avatar2_2.mp4">
+                                            </video>                                  
+                                        </div>
+                                    </div>
+                                    </div>
+                                </div>
+                        </div>
+
+                        <div class="card shadow mb-4">
+                                <!-- Card Header - Accordion -->
+                                <a href="#collapseCardExample1" class="d-block card-header py-3" data-toggle="collapse" role="button" aria-expanded="true" aria-controls="collapseCardExample">
+                                    <h2 class="m-0 font-weight-bold text-primary">Avatar 3</h2>
+                                </a>
+                                <!-- Card Content - Collapse -->
+                                <div class="collapse show" id="collapseCardExample1" style="">
+                                    <div class="card-body">
+                                        <div class="row">
+                                        <div class="col-md-6 mb-12 align-items-center">                                    
+                                            <video class="embed-responsive-item my-video" controls="controls" width="100%">
+                                                <source src="videos/dataset/avatar3_1.mp4">
+                                            </video>
+                                        </div>
+                                        <div class="col-md-6 mb-12 align-items-center">  
+                                            <video class="embed-responsive-item my-video" controls="controls" width="100%">
+                                                <source src="videos/dataset/avatar3_2.mp4">
+                                            </video>                                  
+                                        </div>
+                                    </div>
+                                    </div>
+                                </div>
+                        </div>
+
+                        <div class="card shadow mb-4">
+                                <!-- Card Header - Accordion -->
+                                <a href="#collapseCardExample1" class="d-block card-header py-3" data-toggle="collapse" role="button" aria-expanded="true" aria-controls="collapseCardExample">
+                                    <h2 class="m-0 font-weight-bold text-primary">Avatar 4</h2>
+                                </a>
+                                <!-- Card Content - Collapse -->
+                                <div class="collapse show" id="collapseCardExample1" style="">
+                                    <div class="card-body">
+                                        <div class="row">
+                                        <div class="col-md-6 mb-12 align-items-center">                                    
+                                            <video class="embed-responsive-item my-video" controls="controls" width="100%">
+                                                <source src="videos/dataset/avatar4_1.mp4">
+                                            </video>
+                                        </div>
+                                        <div class="col-md-6 mb-12 align-items-center">  
+                                            <video class="embed-responsive-item my-video" controls="controls" width="100%">
+                                                <source src="videos/dataset/avatar4_2.mp4">
+                                            </video>                                  
+                                        </div>
+                                    </div>
+                                    </div>
+                                </div>
+                        </div>
+
+                        <div class="card shadow mb-4">
+                                <!-- Card Header - Accordion -->
+                                <a href="#collapseCardExample1" class="d-block card-header py-3" data-toggle="collapse" role="button" aria-expanded="true" aria-controls="collapseCardExample">
+                                    <h2 class="m-0 font-weight-bold text-primary">Avatar 5</h2>
+                                </a>
+                                <!-- Card Content - Collapse -->
+                                <div class="collapse show" id="collapseCardExample1" style="">
+                                    <div class="card-body">
+                                        <div class="row">
+                                        <div class="col-md-6 mb-12 align-items-center">                                    
+                                            <video class="embed-responsive-item my-video" controls="controls" width="100%">
+                                                <source src="videos/dataset/avatar5_1.mp4">
+                                            </video>
+                                        </div>
+                                        <div class="col-md-6 mb-12 align-items-center">  
+                                            <video class="embed-responsive-item my-video" controls="controls" width="100%">
+                                                <source src="videos/dataset/avatar5_2.mp4">
+                                            </video>                                  
+                                        </div>
+                                    </div>
+                                    </div>
+                                </div>
+                        </div>
+
+                        <div class="card shadow mb-4">
+                                <!-- Card Header - Accordion -->
+                                <a href="#collapseCardExample1" class="d-block card-header py-3" data-toggle="collapse" role="button" aria-expanded="true" aria-controls="collapseCardExample">
+                                    <h2 class="m-0 font-weight-bold text-primary">Avatar 6</h2>
+                                </a>
+                                <!-- Card Content - Collapse -->
+                                <div class="collapse show" id="collapseCardExample1" style="">
+                                    <div class="card-body">
+                                        <div class="row">
+                                        <div class="col-md-6 mb-12 align-items-center">                                    
+                                            <video class="embed-responsive-item my-video" controls="controls" width="100%">
+                                                <source src="videos/dataset/avatar6_1.mp4">
+                                            </video>
+                                        </div>
+                                        <div class="col-md-6 mb-12 align-items-center">  
+                                            <video class="embed-responsive-item my-video" controls="controls" width="100%">
+                                                <source src="videos/dataset/avatar6_2.mp4">
+                                            </video>                                  
+                                        </div>
+                                    </div>
+                                    </div>
+                                </div>
+                        </div>
+
+                        
+                        </div>                            
+
+                            
+
+                     <div class="mt-4"></div>
+
+
+                    <div>
+                                <div>
+                                    <h2 class="m-0 font-weight-bold text-primary">BibTeX</h2>
+                                </div>
+                                <div>
+                                    <!-- <div class="text-left">
+                                    	<p>If you find this work useful for your research, please consider citing:</p>
+                                        <pre><code>@inproceedings{aneja2023facetalk,
+    title={{F}ace{T}alk: {T}ext-guided {E}diting of {T}extured 3{D} {M}orphable {M}odels},
+    author={Aneja, Shivangi and Thies, Justus and Dai, Angela and Nießner, Matthias},
+    booktitle={ArXiv preprint arXiv:2212.01406},
+    year={2022}
+}
+										</code></pre>
+
+
+                                </div> -->
+                            </div>
+
+                </div>
+                <!-- /.container-fluid -->
+
+            </div>
+
+                            </div>
+                         </div>
+
+
+            <!-- End of Main Content -->
+
+            <!-- Footer -->
+           <!--  <footer class="sticky-footer bg-white">
+                <div class="container my-auto">
+                    <div class="copyright text-center my-auto">
+                        <span>Copyright &copy; Your Website 2020</span>
+                    </div>
+                </div>
+            </footer> -->
+            <footer class="footer mt-auto footer-light">
+                <div class="container-fluid">
+                    <div class="copyright text-center my-auto">
+                        <span>Copyright &copy; Shivangi Aneja 2023</span><br>
+                        <span>Made with <span class="text-primary"><a href="https://startbootstrap.com/theme/sb-admin-2" >Bootstrap</a></span></span>
+                    </div>
+                </div>
+                <a class="btn btn-primary lift btn-lg scroll-to-top rounded ml-3 mr-3 lift" href="#page-top">
+			        <i class="fas fa-angle-up"></i>
+			    </a>
+            </footer>
+            <!-- End of Footer -->
+
+        </div>
+        <!-- End of Content Wrapper -->
+
+        </div>
+        <!-- End of Page Wrapper -->
+    <!-- Scroll to Top Button-->
+</div>
+
+
+    <!-- Bootstrap core JavaScript-->
+    <script src="../../vendor/jquery/jquery.min.js"></script>
+    <script src="../../vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+
+    <!-- Core plugin JavaScript-->
+    <script src="../../vendor/jquery-easing/jquery.easing.min.js"></script>
+
+    <!-- Custom scripts for all pages-->
+    <script src="../../js/sb-admin-2.min.js"></script>
+
+</body>
+
+</html>
