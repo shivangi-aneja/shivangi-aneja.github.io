@@ -1,0 +1,59 @@
+/* Position the carousel controls to the sides */
+.carousel-control-prev,
+.carousel-control-next {
+    width: 15%; /* Reduce button area width */
+    position: absolute;
+    top: 50%; /* Vertically center the buttons */
+    transform: translateY(-50%); /* Adjust centering */
+    z-index: 10; /* Ensure buttons are above other elements */
+    background: none; /* Remove any background */
+    border: none; /* Remove borders */
+    outline: none; /* Remove focus outline */
+}
+
+/* Adjust left and right positioning */
+.carousel-control-prev {
+    left: -3%; /* Push the left button further outside */
+}
+
+.carousel-control-next {
+    right: -3%; /* Push the right button further outside */
+}
+
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+    width: 50px; /* Larger size for the icons */
+    height: 50px; /* Maintain proportional size */
+    background-color: rgba(255, 255, 255, 0.8); /* Light, semi-transparent background */
+    border-radius: 50%; /* Make the icon circular */
+    border: 2px solid rgba(0, 0, 0, 0.2); /* Optional: add subtle border around the icon */
+    background-size: 20px 20px; /* Scale down the arrow inside the button */
+}
+
+/* Style the carousel indicators (buttons) */
+.carousel-indicators button {
+    width: 15px; /* Adjust the size of the indicator button */
+    height: 15px; /* Ensure height matches width to form a perfect circle */
+    border-radius: 50%; /* Make the buttons circular */
+    background-color: rgba(255, 255, 255, 0.5); /* Default color (semi-transparent) */
+    border: none; /* Remove any borders */
+    transition: background-color 0.3s ease, transform 0.3s ease; /* Smooth transition for hover effect */
+     margin: 2px; /* Add horizontal spacing between dots (adjust as needed) */
+}
+
+/* Highlight the indicator button on hover */
+.carousel-indicators button:hover {
+    background-color: rgba(255, 255, 255, 0.8); /* Darker color on hover */
+    transform: scale(1.5); /* Slightly enlarge the button on hover */
+}
+
+/* Active indicator (the one that corresponds to the current slide) */
+.carousel-indicators .active {
+    background-color: rgba(255, 255, 255, 0.8); /* Light color for active indicator */
+    border-color: rgba(255, 255, 255, 0.8); /* Same as background */
+}
+
+/* Adjust position of the carousel indicators */
+.carousel-indicators {
+    bottom: 20px; /* Adjust the position of the indicators */
+}
